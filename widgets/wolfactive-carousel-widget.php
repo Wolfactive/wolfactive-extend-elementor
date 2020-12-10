@@ -4,14 +4,6 @@
  * Elementor widget that inserts carousel (Slider banner) into the page.
  * @since 1.0.0
  */
-use Elementor\Plugin;
-
-
-if ( Plugin::$instance->editor->is_edit_mode() ) : 
-    add_action('wp_footer',function(){
-        _e('<script defer type="text/javascript" src="'.plugins_url( 'script/carousel.js', __FILE__ ).'"></script>', 'ella');
-    },5);
-endif;
 
 class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 

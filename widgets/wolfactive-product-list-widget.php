@@ -1,0 +1,177 @@
+<?php
+/**
+ * Elementor Carousel Widget.
+ * Elementor widget that inserts carousel (Slider banner) into the page.
+ * @since 1.0.0
+ */
+use Elementor\Plugin;
+
+
+// if ( Plugin::$instance->editor->is_edit_mode() ) : 
+//     add_action('wp_footer',function(){
+//         _e('<script defer type="text/javascript" src="'.plugins_url( 'script/product-list.js', __FILE__ ).'"></script>', 'ella');
+//     },5);
+// endif;
+
+class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'wolfactive_product_list';
+    }
+    public function get_title() {
+        return __( 'Product List', 'wolfactive-extend-elementor' );
+    }
+    public function get_icon() {
+        return 'fas fa-th-list';
+    }
+    public function get_categories() {
+        return [ 'wolfactive-widgets' ];
+    }
+    public function __construct($data = [], $args = null) {
+        parent::__construct($data, $args);
+        $plugin_url = plugin_dir_url( __FILE__ );
+        wp_register_script( 'wolfactive-ella-elementor-product-slider-js', $plugin_url . 'script/product-list.js', array( 'jquery', 'elementor-frontend' ), '', true );
+    
+    }
+    
+    public function get_script_depends() {
+        return [ 'wolfactive-ella-elementor-product-slider-js' ];
+    }
+
+    /**
+     * Register Posts widget controls.
+     * Adds different input fields to allow the user to customize the widget settings.
+     * @since 1.0.0
+     * @access protected
+     */
+    protected function _register_controls() {
+
+        /**
+         * Add content tab
+         */
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => __( 'Setting', 'wolfactive-extend-elementor' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+        );
+
+        $this->add_control(
+			'title', [
+				'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __( 'New Arrival' , 'wolfactive-extend-elementor' ),
+				'label_block' => true,
+			]
+        );
+
+        $this->add_control(
+			'description', [
+				'label' => __( 'Description', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'default' => __( 'Phasellus lorem malesuada ligula pulvinar commodo maecenas' , 'wolfactive-extend-elementor' ),
+				'label_block' => true,
+			]
+        );
+
+        $options = [];
+		$post_array = get_posts('post_type=product&posts_per_page=-1&post_status=publish');
+		foreach($post_array as $post){
+			$options[$post->ID] = [__($post->post_title,'wolfactive-extend-elementor')];
+		}
+		$this->add_control(
+			'show_elements',
+			[
+				'label' => __( 'Choose Product', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT2,
+				'multiple' => true,
+				'options' => $options,
+                'default' => [],
+                'label_block' => true,
+			]
+        );
+
+        $this->add_control(
+            'slider_item_pc',
+            [
+                'label' => __( 'Product Item on Desktop', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 10,
+                'step' => 10,
+                'default' => 4,
+            ]
+        );
+
+        $this->add_control(
+            'slider_item_tablet',
+            [
+                'label' => __( 'Product Item on Tablet', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 5,
+                'step' => 5,
+                'default' => 3,
+            ]
+        );
+
+        $this->add_control(
+            'slider_item_mobile',
+            [
+                'label' => __( 'Product Item on Mobile', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 5,
+                'step' => 5,
+                'default' => 2,
+            ]
+        );
+        
+        $this->add_control(
+			'slider_style',
+			[
+				'label' => __( 'Carousel Style', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'slider',
+				'options' => [
+					'slider'  => __( 'Slider', 'wolfactive-extend-elementor' ),
+					'loadmore' => __( 'Load More', 'wolfactive-extend-elementor' ),
+				],
+			]
+        );
+        
+        $this->add_control(
+			'button_title', [
+				'label' => __( 'Button Content', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __( 'Load More' , 'wolfactive-extend-elementor' ),
+				'label_block' => true,
+			]
+        );
+        
+
+        $this->end_controls_section();
+    }
+
+    /**
+     * Render Posts widget output on the frontend.
+     * Written in PHP and used to generate the final HTML.
+     * @since 1.0.0
+     * @access protected
+     */
+	protected function render() {
+        $settings = $this->get_settings_for_display();
+        $class_preflix = 'wa-ella';
+        if($settings['slider_style'] === 'slider'){
+            include __DIR__ . '/sections/product-list/slider.php';
+        }
+        if($settings['slider_style'] === 'loadmore'){
+            include __DIR__ . '/sections/product-list/loadmore.php';
+        }
+	}
+
+	protected function _content_template() {
+		
+	}
+}
