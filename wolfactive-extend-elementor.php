@@ -24,7 +24,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with (Plugin Name). If not, see (http://link to your plugin license).
 */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -146,7 +145,7 @@ final class Wolfactive_Extend_Elementor {
         add_action( 'elementor/elements/categories_registered', [ $this, 'WolfactiveElementor__widget_categories' ] );
 
         add_action( 'wp_enqueue_scripts', [ $this, 'init_style_script' ]);
-
+        add_action( 'wp_head', [ $this, 'init_script_excute' ]);
     }
 
     /**
@@ -238,8 +237,10 @@ final class Wolfactive_Extend_Elementor {
         /**
          * Posts Widget
          */
-        //Include Posts Widget File 
-        
+         //Include Widget File 
+        require_once( __DIR__ . '/widgets/wolfactive-carousel-widget.php' );
+        // Register posts widget
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
     }
 
     public function init_style_script() {
@@ -251,6 +252,11 @@ final class Wolfactive_Extend_Elementor {
         wp_enqueue_style( 'wolfactive-ella-elementor-addon-css', $plugin_url . 'dist/css/main.css' );
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-lib-js', $plugin_url . 'lib/slick.min.js', array ( 'jquery' ), 1.1, true);
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-js', $plugin_url . 'dist/js/root.js', array ( 'jquery' ), 1.1, true);
+    }
+    public function init_script_excute() {
+        if(!is_admin()):
+            _e('<script defer type="text/javascript" src="'.plugins_url( 'dist/js/root.js', __FILE__ ).'"></script>', 'ella');
+        endif;
     }
 }
 

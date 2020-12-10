@@ -1,0 +1,106 @@
+.wa-ella{
+    &-carousel-item{
+        position: relative;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        &-title{
+            display: block;
+            text-align: center;
+            max-width: 425px;
+            margin: 0;
+            padding: 0;
+            font-size: 40px;
+            color: #232323;
+            letter-spacing: .05em;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 17px;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 40px;
+                background-color: #232323;
+            }
+        }
+        &-description{
+            font-size: 12px;
+            color: #232323;
+            margin-bottom: 35px;
+            max-width: 425px;
+            text-align: center;
+        }
+        &-link{
+            text-align: center;
+            max-width: 425px;
+        }
+        &-button{
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: .05em;
+            font-size: 13px;
+            line-height: 20px;
+            outline: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border-radius: 0;
+            padding: 8px 15px 6px;
+            border: 1px solid rgba(255,255,255,0);
+            min-width: 130px;
+            max-width: 100%;
+            background-color: #232323;
+            border-color: #232323;
+            color: #ffffff;
+            min-width: 270px;
+            padding: 10px 25px 8px;
+            -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            text-decoration: none!important;
+            &:hover{
+                background-color: #fff;
+                color: #232323 ;
+                border-color: #fff ;
+            }
+        }
+        &-contain{
+            position: absolute;
+            width: 1200px;
+            @include MediaQuery($lg){
+                width: 100%;
+            }
+            padding: 0 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            &.left{
+                &>*{
+                    margin-right: auto;
+                }
+            }
+            &.center{
+                &>*{
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                
+            }
+            &.right{
+                &>*{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
