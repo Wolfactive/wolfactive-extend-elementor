@@ -1,0 +1,7 @@
+.slick-slider{
+    .slick-prev, .slick-next{
+        &::before{
+            display: none;
+        }
+    }
+}

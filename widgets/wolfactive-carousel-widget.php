@@ -68,6 +68,19 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
             ]
         );
         
+        $this->add_control(
+			'slider_style',
+			[
+				'label' => __( 'Carousel Style', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'default',
+				'options' => [
+					'default'  => __( 'Default', 'wolfactive-extend-elementor' ),
+					'decore' => __( 'Decore', 'wolfactive-extend-elementor' ),
+				],
+			]
+        );
+        
         /* Begin Carousel Item Repeater */
         $repeater = new \Elementor\Repeater();
         /* Begin Repeater for modal product */
@@ -198,7 +211,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 		$repeater_child->add_control(
 			'show_elements',
 			[
-				'label' => __( 'Choose Product', 'plugin-domain' ),
+				'label' => __( 'Choose Product', 'wolfactive-extend-elementor' ),
 				'type' => \Elementor\Controls_Manager::SELECT2,
 				'multiple' => true,
 				'options' => $options,
