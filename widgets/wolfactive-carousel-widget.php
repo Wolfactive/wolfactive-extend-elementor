@@ -19,17 +19,6 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
     public function get_categories() {
         return [ 'wolfactive-widgets' ];
     }
-
-    public function __construct($data = [], $args = null) {
-        parent::__construct($data, $args);
-        $plugin_url = plugin_dir_url( __FILE__ );
-        wp_register_script( 'wolfactive-ella-elementor-carousel-js', $plugin_url . 'script/carousel.js', array( 'jquery', 'elementor-frontend' ), '', true );
-    
-    }
-    
-    public function get_script_depends() {
-        return [ 'wolfactive-ella-elementor-carousel-js' ];
-    }
     /**
      * Register Posts widget controls.
      * Adds different input fields to allow the user to customize the widget settings.
