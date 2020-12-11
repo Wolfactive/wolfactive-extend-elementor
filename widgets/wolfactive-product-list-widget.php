@@ -27,16 +27,6 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
     public function get_categories() {
         return [ 'wolfactive-widgets' ];
     }
-    public function __construct($data = [], $args = null) {
-        parent::__construct($data, $args);
-        $plugin_url = plugin_dir_url( __FILE__ );
-        wp_register_script( 'wolfactive-ella-elementor-product-slider-js', $plugin_url . 'script/product-list.js', array( 'jquery', 'elementor-frontend' ), '', true );
-    
-    }
-    
-    public function get_script_depends() {
-        return [ 'wolfactive-ella-elementor-product-slider-js' ];
-    }
 
     /**
      * Register Posts widget controls.
@@ -143,7 +133,7 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
         
         $this->add_control(
 			'button_title', [
-				'label' => __( 'Button Content', 'wolfactive-extend-elementor' ),
+				'label' => __( 'Button Content (Fill if you choose slider style)', 'wolfactive-extend-elementor' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => __( 'Load More' , 'wolfactive-extend-elementor' ),
 				'label_block' => true,
