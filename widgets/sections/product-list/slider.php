@@ -1,14 +1,16 @@
 <div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--slider">
     <h3 class="<?php _e($class_preflix,'ella') ?>-product-list-title">
-        <?php _e($settings['title'],'ella') ?>
+        <span>
+            <?php _e($settings['title'],'ella') ?>
+        </span>
     </h3>
     <?php if($settings['description']):?>
-    <p class="<?php _e($class_preflix,'ella') ?>-product-list-description>">
+    <p class="<?php _e($class_preflix,'ella') ?>-product-list-description">
         <?php _e($settings['description'],'ella') ?>
     </p>
     <?php endif;?>
     <?php if($settings['show_elements']):?>
-    <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain">
+    <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain" data-show-pc="<?php _e($settings['slider_item_pc'],'ella'); ?>" data-show-tablet="<?php _e($settings['slider_item_tablet'],'ella'); ?>">
         <?php foreach($settings['show_elements'] as $post): ?>
         <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain-item">
             <?php  

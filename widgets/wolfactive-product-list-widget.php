@@ -88,9 +88,9 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
                 'label' => __( 'Product Item on Desktop', 'wolfactive-extend-elementor' ),
                 'type' => \Elementor\Controls_Manager::NUMBER,
                 'min' => 1,
-                'max' => 10,
-                'step' => 10,
-                'default' => 4,
+                'max' => 6,
+                'step' => 6,
+                'default' => 3,
             ]
         );
 
@@ -103,18 +103,6 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
                 'max' => 5,
                 'step' => 5,
                 'default' => 3,
-            ]
-        );
-
-        $this->add_control(
-            'slider_item_mobile',
-            [
-                'label' => __( 'Product Item on Mobile', 'wolfactive-extend-elementor' ),
-                'type' => \Elementor\Controls_Manager::NUMBER,
-                'min' => 1,
-                'max' => 5,
-                'step' => 5,
-                'default' => 2,
             ]
         );
         

@@ -264,3 +264,45 @@ final class Wolfactive_Extend_Elementor {
 
 // instantiate the class `Wolfactive_Extend_Elementor` and run
 Wolfactive_Extend_Elementor::instance();
+
+// support function
+
+function ella_check_col_render_class($col_pc,$col_tablet){
+    if($col_pc == 1){
+        _e('col-divide-12','ella');
+    }
+    if($col_pc === 2){
+        _e('col-divide-6','ella');
+    }
+    if($col_pc === 3){
+        _e('col-divide-4','ella');
+    }
+    if($col_pc === 4){
+        _e('col-divide-3','ella');
+    }
+    if($col_pc === 5){
+        _e('col-divide-5-col','ella');
+    }
+    if($col_pc === 5){
+        _e('col-divide-2','ella');
+    }
+    _e(' ','ella');
+    if($col_tablet == 1){
+        _e('col-divide-lg-12','ella');
+    }
+    if($col_tablet === 2){
+        _e('col-divide-lg-6','ella');
+    }
+    if($col_tablet === 3){
+        _e('col-divide-lg-4','ella');
+    }
+    if($col_tablet === 4){
+        _e('col-divide-lg-3','ella');
+    }
+    if($col_tablet === 5){
+        _e('col-divide-lg-5-col','ella');
+    }
+    if($col_tablet === 5){
+        _e('col-divide-lg-2','ella');
+    }
+}
