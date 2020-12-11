@@ -1,19 +1,19 @@
 <?php
 /**
- * Elementor Product List Widget.
- * Elementor widget that insert product list into the page.
+ * Elementor Product Tab Widget.
+ * Elementor widget that insert product tab into the page.
  * @since 1.0.0
  */
-class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
+class Wolfactive_Elementor_Product_tab extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'wolfactive_product_list';
+        return 'wolfactive_product_tab';
     }
     public function get_title() {
-        return __( 'Product List', 'wolfactive-extend-elementor' );
+        return __( 'Product Tab', 'wolfactive-extend-elementor' );
     }
     public function get_icon() {
-        return 'fas fa-th-list';
+        return 'fas fa-ellipsis-h';
     }
     public function get_categories() {
         return [ 'wolfactive-widgets' ];
@@ -56,20 +56,16 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
 			]
         );
 
-        $options = [];
-		$post_array = get_posts('post_type=product&posts_per_page=-1&post_status=publish');
-		foreach($post_array as $post){
-			$options[$post->ID] = [__($post->post_title,'wolfactive-extend-elementor')];
-		}
-		$this->add_control(
-			'show_elements',
+        $this->add_control(
+			'tab_style',
 			[
-				'label' => __( 'Choose Product', 'wolfactive-extend-elementor' ),
-				'type' => \Elementor\Controls_Manager::SELECT2,
-				'multiple' => true,
-				'options' => $options,
-                'default' => [],
-                'label_block' => true,
+				'label' => __( 'Tab Style', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'style1',
+				'options' => [
+					'style1'  => __( 'Style1', 'wolfactive-extend-elementor' ),
+					'style2' => __( 'Style2', 'wolfactive-extend-elementor' ),
+				],
 			]
         );
 
@@ -96,30 +92,51 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
                 'default' => 3,
             ]
         );
-        
-        $this->add_control(
-			'slider_style',
-			[
-				'label' => __( 'Carousel Style', 'wolfactive-extend-elementor' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'slider',
-				'options' => [
-					'slider'  => __( 'Slider', 'wolfactive-extend-elementor' ),
-					'loadmore' => __( 'Load More', 'wolfactive-extend-elementor' ),
-				],
-			]
-        );
-        
-        $this->add_control(
-			'button_title', [
-				'label' => __( 'Button Content (Fill if you choose slider style)', 'wolfactive-extend-elementor' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Load More' , 'wolfactive-extend-elementor' ),
-				'label_block' => true,
-			]
-        );
-        
 
+         /* Begin Carousel Item Repeater */
+        $repeater = new \Elementor\Repeater();
+         /* Begin Repeater for modal product */
+        
+        $repeater->add_control(
+            'list_title', [
+                'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'List Title' , 'wolfactive-extend-elementor' ),
+                'label_block' => true,
+            ]
+        );
+
+        $options = [];
+		$post_array = get_posts('post_type=product&posts_per_page=-1&post_status=publish');
+		foreach($post_array as $post){
+			$options[$post->ID] = [__($post->post_title,'wolfactive-extend-elementor')];
+		}
+		$repeater->add_control(
+			'show_elements',
+			[
+				'label' => __( 'Choose Product', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT2,
+				'multiple' => true,
+				'options' => $options,
+                'default' => [],
+                'label_block' => true,
+			]
+        );
+        
+        $this->add_control(
+            'list',
+            [
+                'label' => __( 'Tab List', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'list_title' => __( 'Womens', 'wolfactive-extend-elementor' ),
+                    ],
+                ],
+                'title_field' => '{{{ list_title }}}',
+            ]
+        );
         $this->end_controls_section();
     }
 
@@ -132,12 +149,7 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
         $class_preflix = 'wa-ella';
-        if($settings['slider_style'] === 'slider'){
-            include __DIR__ . '/sections/product-list/slider.php';
-        }
-        if($settings['slider_style'] === 'loadmore'){
-            include __DIR__ . '/sections/product-list/loadmore.php';
-        }
+        include __DIR__ . '/sections/product-tab.php';
 	}
 
 	protected function _content_template() {
