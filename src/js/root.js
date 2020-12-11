@@ -1,5 +1,5 @@
 import './controls/carousel.js';
-import './control/instagram.js';
+import './controls/instagram.js';
 import './controls/product-list.js';
 import './controls/product-tab.js';
 /* Config Light box */

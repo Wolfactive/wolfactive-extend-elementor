@@ -240,19 +240,13 @@ final class Wolfactive_Extend_Elementor {
          //Include Widget File 
         require_once( __DIR__ . '/widgets/wolfactive-carousel-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-product-list-widget.php' );
-<<<<<<< HEAD
         require_once( __DIR__ . '/widgets/wolfactive-instagram-widget.php' );
-        // Register posts widget
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Instagram() );
-=======
         require_once( __DIR__ . '/widgets/wolfactive-product-tab-widget.php' );
         // Register posts widget
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );       
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Instagram() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_tab() );
->>>>>>> 685f9d1877e2d943d360348e8229d4f6a4107d8d
     }
 
     public function init_style_script() {
