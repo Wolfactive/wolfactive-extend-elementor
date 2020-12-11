@@ -1,5 +1,9 @@
 .wa-ella{
     &-product-list{
+        margin-bottom: 50px;
+        @include MediaQuery($md){
+            margin-bottom: 40px;
+        }
         &.product-list--slider{
             .slick-prev, .slick-next{
                 top: calc(50% - 86px);
@@ -33,7 +37,8 @@
         &-title{
             position: relative;
             text-align: center;
-            margin: 0 0 10px 0!important;
+            padding-top: 15px;
+            margin-bottom: 10px;
             span{
                 color: #232323;
                 font-size: 20px;
@@ -45,6 +50,8 @@
                 position: relative;
                 z-index: 1;
                 background-color: #fff;
+                display: inline-block;
+                margin: 0 0 10px 0!important;
             }
             &::before{
                 position: absolute;
