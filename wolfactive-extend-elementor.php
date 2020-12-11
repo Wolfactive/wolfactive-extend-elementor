@@ -240,9 +240,11 @@ final class Wolfactive_Extend_Elementor {
          //Include Widget File 
         require_once( __DIR__ . '/widgets/wolfactive-carousel-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-product-list-widget.php' );
+        require_once( __DIR__ . '/widgets/wolfactive-instagram-widget.php' );
         // Register posts widget
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Instagram() );
     }
 
     public function init_style_script() {
