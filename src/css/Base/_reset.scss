@@ -1,4 +1,9 @@
 .slick-slider{
+    *{
+        &:focus{
+            outline: none !important;
+        }
+    }
     .slick-prev, .slick-next{
         z-index: 2000;
         &::before{
