@@ -10,10 +10,10 @@ class Wolfactive_Elementor_Product_tab extends \Elementor\Widget_Base {
         return 'wolfactive_product_tab';
     }
     public function get_title() {
-        return __( 'Product Tab', 'wolfactive-extend-elementor' );
+        return __( 'Ella Product Tab', 'wolfactive-extend-elementor' );
     }
     public function get_icon() {
-        return 'fas fa-ellipsis-h';
+        return 'eicon-product-tabs';
     }
     public function get_categories() {
         return [ 'wolfactive-widgets' ];

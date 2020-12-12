@@ -10,10 +10,10 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
         return 'wolfactive_product_list';
     }
     public function get_title() {
-        return __( 'Product List', 'wolfactive-extend-elementor' );
+        return __( 'Ella Product List', 'wolfactive-extend-elementor' );
     }
     public function get_icon() {
-        return 'fas fa-th-list';
+        return 'eicon-products';
     }
     public function get_categories() {
         return [ 'wolfactive-widgets' ];

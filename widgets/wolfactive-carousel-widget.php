@@ -11,10 +11,10 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
         return 'wolfactive_carousel';
     }
     public function get_title() {
-        return __( 'Carousel', 'wolfactive-extend-elementor' );
+        return __( 'Ella Carousel', 'wolfactive-extend-elementor' );
     }
     public function get_icon() {
-        return 'fas fa-desktop';
+        return 'eicon-banner';
     }
     public function get_categories() {
         return [ 'wolfactive-widgets' ];
@@ -205,7 +205,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 			[
 				'label' => __( 'Product Modal List', 'wolfactive-extend-elementor' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
+				'fields' => $repeater_child->get_controls(),
 				'default' => [
 					[],
                 ],

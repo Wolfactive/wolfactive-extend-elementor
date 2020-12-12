@@ -4,13 +4,13 @@
  * Elementor widget that insert product list with banner into the page.
  * @since 1.0.0
  */
-class Wolfactive_Elementor_Product_list_width_banner extends \Elementor\Widget_Base {
+class Wolfactive_Elementor_Product_list_with_banner extends \Elementor\Widget_Base {
 
     public function get_name() {
         return 'wolfactive_product_list_with_banner';
     }
     public function get_title() {
-        return __( 'Product List With Banner', 'wolfactive-extend-elementor' );
+        return __( 'Ella Product List With Banner', 'wolfactive-extend-elementor' );
     }
     public function get_icon() {
         return 'fab fa-product-hunt';
