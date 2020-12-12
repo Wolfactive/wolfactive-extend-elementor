@@ -23,7 +23,7 @@
                     </div>
                 <?php $count++; endforeach;?>
                 </div>
-                <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-slider">
+                <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-slider" data-show-pc="<?php _e($settings['slider_item_pc'],'ella'); ?>" data-show-tablet="<?php _e($settings['slider_item_tablet'],'ella'); ?>">
                     <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-list" data-show-pc="<?php _e($settings['slider_item_pc'],'ella'); ?>" data-show-tablet="<?php _e($settings['slider_item_tablet'],'ella'); ?>">
                     <?php foreach($settings['list'][0]['show_elements'] as $post): ?>
                         <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-list-item">

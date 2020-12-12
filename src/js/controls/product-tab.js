@@ -3,10 +3,22 @@ jQuery( document ).ready(function($) {
     let $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></button>';
     let $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></button>';
 
-    const tabQueryAjax = tab =>{
-        console.log(tab)
-        let tabListGET = document.querySelector('.wa-ella-product-tab .wa-ella-product-tab-contain-tabs-list');
-        let tabContent = document.querySelector('.wa-ella-product-tab .wa-ella-product-tab-contain-slider');
+    function tabQueryAjax (tab){
+        let tabListGET = tab.target.parentElement;
+        let tabContent = tabListGET.nextElementSibling;
+        let tabContainer = tabListGET.parentElement;
+        let tabCurrent = tabContainer.parentElement;
+        let tabParent = tabCurrent.parentElement;
+        let tabsCurrent = document.querySelectorAll('.wa-ella-product-tab');
+        var count;
+        if(tabsCurrent.length !== 0){
+            for(let j = 0; j < tabsCurrent.length; j++){
+                if(tabsCurrent[j] == tabParent){
+                    count = j
+                }
+            }
+        }
+        console.log(count);
         if(tabListGET){
             let tabsGET = Array.prototype.slice.call(tabListGET.children);
             for(let i = 0; i < tabsGET.length; i++) {
@@ -32,35 +44,34 @@ jQuery( document ).ready(function($) {
                         let loading = document.querySelector('.loading');
                         loading.remove();
                         tabContent.innerHTML = `<div class="wa-ella-product-tab-contain-list">${response}</div>`;
-                        let $sliderAfter =  $('.wa-ella-product-tab .wa-ella-product-tab-contain-list');
-                        let $showPCAfter = $sliderAfter.attr("data-show-pc") || 4;
-                        let $showTabletAfter = $sliderAfter.attr("data-show-tablet") || 3;
-                        if(!$sliderAfter.hasClass('.slick-initialized')){
-                            $sliderAfter.not('.slick-initialized').slick({
-                                slidesToShow: parseInt($showPCAfter),
-                                slidesToScroll: 1,
-                                infinite: true,
-                                speed: 300,
-                                nextArrow: $next,
-                                prevArrow: $prev,
-                                responsive: [
-                                    {
-                                    breakpoint: 1024,
-                                        settings: {
-                                            slidesToShow: parseInt($showTabletAfter),
-                                            slidesToScroll: 1,
-                                        }
-                                    },
-                                    {
-                                    breakpoint: 480,
-                                        settings: {
-                                            slidesToShow: 2,
-                                            slidesToScroll: 2
-                                        }
+                        let $sliderAfter =  $('.wa-ella-product-tab .wa-ella-product-tab-contain-list').eq(count);
+                        console.log($sliderAfter);
+                        let $showPCAfter = tabContent.getAttribute("data-show-pc") || 4;
+                        let $showTabletAfter = tabContent.getAttribute("data-show-tablet") || 3;
+                        $sliderAfter.not('.slick-initialized').slick({
+                            slidesToShow: parseInt($showPCAfter),
+                            slidesToScroll: 1,
+                            infinite: true,
+                            speed: 300,
+                            nextArrow: $next,
+                            prevArrow: $prev,
+                            responsive: [
+                                {
+                                breakpoint: 1024,
+                                    settings: {
+                                        slidesToShow: parseInt($showTabletAfter),
+                                        slidesToScroll: 1,
                                     }
-                                ],
-                            })
-                        }
+                                },
+                                {
+                                breakpoint: 480,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        slidesToScroll: 2
+                                    }
+                                }
+                            ],
+                        })
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         console.log(
@@ -72,14 +83,15 @@ jQuery( document ).ready(function($) {
             },500)
         }
     }
-
-    const tabForEach = tab =>{ tab.onclick = tabQueryAjax;}
-
-    const tabsClick = () =>{
-        let tabList = document.querySelector('.wa-ella-product-tab .wa-ella-product-tab-contain-tabs-list');
-        if(tabList){
-            var tabs = Array.prototype.slice.call(tabList.children);
-            if(tabs.length !== 0){ tabs.forEach(tabForEach);}
+    function tabsClick(){
+        let tabLists = document.querySelectorAll('.wa-ella-product-tab .wa-ella-product-tab-contain-tabs-list');
+        if(tabLists.length !== 0){
+            tabLists.forEach((tabList,index)=>{
+                var tabs = Array.prototype.slice.call(tabList.children);
+                if(tabs.length !== 0){ tabs.forEach((tab)=>{
+                    tab.onclick = tabQueryAjax;
+                });}
+            })
         }
     }
 
@@ -87,10 +99,11 @@ jQuery( document ).ready(function($) {
         let slider = document.querySelector('.wa-ella-product-tab .wa-ella-product-tab-contain-list');
         if(slider){
             var $slider =  $('.wa-ella-product-tab .wa-ella-product-tab-contain-list');
-            var $showPC = $slider.attr("data-show-pc") || 4;
-            var $showTablet = $slider.attr("data-show-tablet") || 3;
-            if(!$slider.hasClass('.slick-initialized')){
-                $slider.not('.slick-initialized').slick({
+            var $sliders =  $('.wa-ella-product-tab .wa-ella-product-tab-contain-list').toArray();
+            $.map( $sliders, function( $item,$index ) {
+                let $showPC = $item .getAttribute("data-show-pc") || 4;
+                let $showTablet = $item .getAttribute("data-show-tablet") || 3;
+                $slider.eq($index).not('.slick-initialized').slick({
                     slidesToShow: parseInt($showPC),
                     slidesToScroll: 1,
                     infinite: true,
@@ -99,23 +112,23 @@ jQuery( document ).ready(function($) {
                     prevArrow: $prev,
                     responsive: [
                         {
-                        breakpoint: 1024,
+                            breakpoint: 1024,
                             settings: {
-                                slidesToShow: parseInt($showTablet),
-                                slidesToScroll: 1,
+                            slidesToShow: parseInt($showTablet),
+                            slidesToScroll: 1,
                             }
                         },
                         {
-                        breakpoint: 480,
+                            breakpoint: 480,
                             settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2
+                            slidesToShow: 2,
+                            slidesToScroll: 2
                             }
                         }
                     ],
                 })
-                tabsClick();
-            }
+            });
+            tabsClick();
         }
     }
 
