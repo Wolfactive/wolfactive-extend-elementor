@@ -17,6 +17,7 @@ jQuery( document ).ready(function($) {
               speed: 300,
               nextArrow: $next,
               prevArrow: $prev,
+              dots: true,
               responsive: [
                 {
                   breakpoint: 1024,

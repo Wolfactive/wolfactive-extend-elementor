@@ -18,15 +18,18 @@
                 <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-description">
                     <?php _e( $item['list_content'] , 'wolfactive-extend-elementor' ); ?>
                 </div>
+                
                 <?php
                     $target = $item['button_link']['is_external'] ? ' target="_blank"' : '';
                     $nofollow = $item['button_link']['nofollow'] ? ' rel="nofollow"' : '';
                 ?>
+                <?php if($item['button_title'] && $item['button_link']['url']): ?>
                 <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-link">
                     <a href="<?php _e($item['button_link']['url'],'ella') ?>" class="<?php _e($class_preflix,'ella') ?>-carousel-item-button" <?php _e($target.$nofollow ,'ella') ?> >
                         <?php esc_html_e( $item['button_title'] , 'wolfactive-extend-elementor' ); ?>
                     </a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
         <?php $count++; endforeach; ?>

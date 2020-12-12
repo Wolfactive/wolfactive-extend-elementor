@@ -63,8 +63,10 @@
                         cursor: pointer;
                     }
                     &.slick-active{
-                        background: rgba(255,255,255,0);
-                        border-color: #505656;
+                        button{
+                            background: rgba(255,255,255,0);
+                            border-color: #505656;
+                        }
                     }
                 }
             }

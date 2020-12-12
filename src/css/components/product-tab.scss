@@ -1,5 +1,40 @@
 .wa-ella{
     &-product-tab{
+        .product-item{
+            margin-bottom: 0px;
+        }
+        .slick-dots{
+            display: none;
+            li{
+                button{
+                    &::before{
+                        display: none;
+                    }
+                } 
+            }
+            
+            @include MediaQuery($lg){
+                display: block;
+                li{
+                    button{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        border: 1px solid #707979;
+                        background: #707979;
+                        padding: 0;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    &.slick-active{
+                        button{
+                            background: rgba(255,255,255,0);
+                            border-color: #505656;
+                        }
+                    }
+                }
+            }
+        }
         margin-bottom: 50px;
         @include MediaQuery($md){
             margin-bottom: 40px;
@@ -20,6 +55,9 @@
             justify-content: center;
             align-items: center;
             transition: all 0.25s linear;
+            @include MediaQuery($lg){
+                opacity: 0;
+            }
             i{
                 font-size: 20px;
                 font-weight: 600;
@@ -28,6 +66,12 @@
                 background-color: var(--primary-bg-color);
                 color: #fff;
             }
+        }
+        .slick-prev{
+            left: 6px;
+        }
+        .slick-next{
+            right: 6px;
         }
         &-title{
             position: relative;

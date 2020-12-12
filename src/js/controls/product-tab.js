@@ -52,6 +52,7 @@ jQuery( document ).ready(function($) {
                             slidesToShow: parseInt($showPCAfter),
                             slidesToScroll: 1,
                             infinite: true,
+                            dots: true,
                             speed: 300,
                             nextArrow: $next,
                             prevArrow: $prev,
@@ -67,7 +68,7 @@ jQuery( document ).ready(function($) {
                                 breakpoint: 480,
                                     settings: {
                                         slidesToShow: 2,
-                                        slidesToScroll: 2
+                                        slidesToScroll: 2,
                                     }
                                 }
                             ],
@@ -110,6 +111,7 @@ jQuery( document ).ready(function($) {
                     speed: 300,
                     nextArrow: $next,
                     prevArrow: $prev,
+                    dots: true,
                     responsive: [
                         {
                             breakpoint: 1024,
