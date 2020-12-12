@@ -1,5 +1,5 @@
 
-<div class="<?php _e($class_preflix,'ella') ?>-instagram instagram-no-arrow">
+<div class="<?php _e($class_preflix,'ella') ?>-instagram instagram-two-row">
     <h3 class="<?php _e($class_preflix,'ella') ?>-title-instagram">
         <div class="mc-dp-flex">
             <p class="wa-icon-instagram"><i class="fab fa-instagram"></i></p>
@@ -9,7 +9,7 @@
     <div class="<?php _e($class_preflix,'ella') ?>-description-instagram">
         <?php _e($settings['instagram_description'],'ella') ?>
     </div>
-    <div class="<?php _e($class_preflix,'ella') ?>-slider-noarrow-instagram" data-show-item="<?php _e($settings['slider_item'],'ella') ?>">
+    <div class="<?php _e($class_preflix,'ella') ?>-two-row-instagram" data-show-item="<?php _e($settings['slider_item'],'ella') ?>">
             <?php foreach (  $settings['gallery'] as $image ): ?>
             <a href="<?php echo  $image['url']; ?>" data-lightbox="roadtrip" class="<?php _e($class_preflix,'ella') ?>-image-instagram">
                 <?php

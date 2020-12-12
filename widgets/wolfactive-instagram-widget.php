@@ -31,6 +31,7 @@
                     'options' => [
                         'slider-arrow'  => __( 'Slider Arrow', 'wolfactive-extend-elementor' ),
                         'slider-no-arrow' => __( 'Slide No Arrow', 'wolfactive-extend-elementor' ),
+                        'slider-two-row' => __( 'Slide Two Row', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
@@ -60,6 +61,33 @@
                     'default' => [],
                 ]
             );
+            $this->add_control(
+                'instagram_button', [
+                    'label' => __( 'Button', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'View Gallery' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'instagram_link', [
+                    'label' => __( 'Link Button', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'javascript:void(0)' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'slider_item',
+                [
+                    'label' => __( 'Instagram Item', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::NUMBER,
+                    'min' => 1,
+                    'max' => 7,
+                    'step' => 7,
+                    'default' => 5,
+                ]
+            );
             $this->end_controls_section();
         }
         protected function render() {
@@ -70,6 +98,9 @@
             }
             if($settings['instagram_style'] === 'slider-no-arrow'){
                 include __DIR__ . '/sections/instagram/instagram-slider-no-arrow.php';
+            }
+            if($settings['instagram_style'] === 'slider-two-row'){
+                include __DIR__ . '/sections/instagram/instagram-two-row.php';
             }
         }
     }

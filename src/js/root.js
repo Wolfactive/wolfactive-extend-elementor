@@ -5,6 +5,6 @@ import './controls/product-tab.js';
 import './controls/product-list-with-banner.js';
 /* Config Light box */
 lightbox.option({
-    'resizeDuration': 200,
+    'resizeDuration': 400,
     'wrapAround': true
 })
