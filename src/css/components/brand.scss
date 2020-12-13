@@ -1,0 +1,51 @@
+
+.wa-ella-brand{
+    .wa-ella-title-brand{
+        color: #232323;
+        font-size: 20px;
+        letter-spacing: .05em;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.25em;
+        margin-bottom: 15px;
+    }
+    .wa-ella-description-brand{
+        margin-bottom: 30px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .slick-arrow{
+        display: block;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 1px solid #323232;
+        color:#323232;
+        background: #fff;
+        // padding-left: 6px;
+        &:hover{
+            color:#fff;
+            background: #323232;
+            transition: 0.5s all;
+        }
+    }
+    .slick-prev{
+        padding-left: 6px;
+        position: absolute;
+        left: -17px;
+        top: 50%;
+        z-index: 1;
+    }
+    .slick-next{
+        padding-left: 6px;
+        position: absolute;
+        right: -17px;
+        top: 50%;
+        z-index: 1;
+    }
+    .slick-initialized .slick-slide{
+        padding: 0 19px;
+    }
+    // margin: 0 -19px;
+}

@@ -21,16 +21,33 @@
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 ]
             );
-
+            $this->add_control(
+                'brand_title', [
+                    'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'AS SEEN ON' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'brand_description',
+                [
+                    'label' => __( 'Description', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    'rows' => 10,
+                    'default' => __( 'Brand description', 'wolfactive-extend-elementor' ),
+                    'placeholder' => __( 'Type your description here', 'wolfactive-extend-elementor' ),
+                ]
+            );
             $this->add_control(
                 'brand_style',
                 [
-                    'label' => __( 'Instagram Style', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Brand Style', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::SELECT,
                     'default' => 'brand-slider',
                     'options' => [
                         'brand-slider'  => __( 'Brand Slider', 'wolfactive-extend-elementor' ),
-                        'brand-no-slider' => __( 'Brand No Slider', 'wolfactive-extend-elementor' ),
+                        'brand-have-td' => __( 'Brand Have Title Description', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
@@ -90,8 +107,8 @@
             if($settings['brand_style'] === 'brand-slider'){
                 include __DIR__ . '/sections/brand/brand-slider.php';
             }
-            if($settings['brand_style'] === 'brand-no-slider'){
-                include __DIR__ . '/sections/brand/brand-no-slider.php';
+            if($settings['brand_style'] === 'brand-have-td'){
+                include __DIR__ . '/sections/brand/brand-have-title-des.php';
             }
         }
     }
