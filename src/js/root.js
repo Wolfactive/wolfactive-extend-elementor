@@ -3,6 +3,7 @@ import './controls/instagram.js';
 import './controls/product-list.js';
 import './controls/product-tab.js';
 import './controls/product-list-with-banner.js';
+import './controls/product-tab-with-banner.js';
 /* Config Light box */
 lightbox.option({
     'resizeDuration': 400,

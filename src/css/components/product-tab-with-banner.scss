@@ -1,0 +1,79 @@
+.wa-ella{
+    &-product-tab-with-banner{
+        &-top{
+            margin-bottom: 25px;
+            padding-right: 0;
+            display: flex;
+            align-items: flex-start;
+            padding: 13px 60px 7px 0;
+            border-bottom: 2px solid #e0e0e0;
+            justify-content: flex-start;
+            &-title{
+                flex: 0 0 25%;
+                max-width: 25%;
+                border: none;
+                padding: 0;
+                margin: 0;
+                color: #232323;
+                font-size: 20px;
+                letter-spacing: .05em;
+                font-weight: 700;
+                text-transform: uppercase;
+                position: relative;
+            }
+            &-tab{
+                flex: 0 0 75%;
+                max-width: 75%;
+                padding: 0;
+                margin: 0;
+                justify-content: flex-end;
+                overflow-x: initial;
+                flex-wrap: nowrap;
+                display: flex;
+                align-items: center;
+                &-item{
+                    flex: 0 0 auto;
+                    max-width: initial;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    border: none;
+                    padding: 4px 15px 2px 16px;
+                    text-align: left;
+                    letter-spacing: .05em;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    &:first-of-type{
+                        margin-left: -15px;
+                    }
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        left: 0;
+                        width: 1px;
+                        height: 15px;
+                        transform: translateY(-50%);
+                        background-color: #bebebe;
+                    }
+                    &.active{
+                        font-weight: 600;
+                        color: #232323;
+                        &::before{
+                            display: none;
+                        }
+                        &:after{
+                            position: absolute;
+                            content: "";
+                            bottom: -13px;
+                            left: 50%;
+                            border: 7px solid transparent;
+                            transform: translateX(calc(-50% + 1px));
+                            border-bottom-color: #e0e0e0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   
