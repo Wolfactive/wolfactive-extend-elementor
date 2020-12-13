@@ -37,6 +37,14 @@ class Wolfactive_Elementor_Product_tab_with_banner extends \Elementor\Widget_Bas
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
         );
+        $this->add_control(
+            'title_block', [
+                'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'COLLECTIONS' , 'wolfactive-extend-elementor' ),
+                'label_block' => true,
+            ]
+        );
          /* Begin Carousel Item Repeater */
         $repeater = new \Elementor\Repeater();
          /* Begin Repeater for modal product */
@@ -83,6 +91,17 @@ class Wolfactive_Elementor_Product_tab_with_banner extends \Elementor\Widget_Bas
 			]
         );
 
+        $repeater->add_control(
+			'list_image',
+			[
+				'label' => __( 'Choose Image', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [  
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+        );
+
         $this->add_control(
             'list_banner',
             [
@@ -107,7 +126,29 @@ class Wolfactive_Elementor_Product_tab_with_banner extends \Elementor\Widget_Bas
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
         );
-        
+        $this->add_control(
+            'slider_item_pc',
+            [
+                'label' => __( 'Product Item on Desktop', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 6,
+                'step' => 6,
+                'default' => 3,
+            ]
+        );
+
+        $this->add_control(
+            'slider_item_tablet',
+            [
+                'label' => __( 'Product Item on Tablet', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 5,
+                'step' => 5,
+                'default' => 3,
+            ]
+        );
          /* Begin Carousel Item Repeater */
          $repeater_child = new \Elementor\Repeater();
          /* Begin Repeater for modal product */
