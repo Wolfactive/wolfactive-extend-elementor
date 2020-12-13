@@ -1,0 +1,56 @@
+.wa-ella-polict-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: .05em;
+    padding: 13px 0px;
+    // &:nth-child(3) {
+    //     margin-right:0;
+    //   }
+    .mc-gc{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background: #232323;
+            height: 1px;
+            bottom: -3px;
+            left: 0;
+            transition: 0.5s all;
+            width: 0;
+        }
+    }
+    &:hover{
+        .mc-gc{
+            &::before{
+                width: 100%;
+                transition: 0.5s all;
+            }
+        }
+    }
+}
+.style-icon-policy{
+    margin-right: 9px;
+    i{
+        font-size: 14px;
+        
+        transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+    }
+    
+}
+.policy-none-background{
+    // .wa-ella-background-policy
+    margin:0 -15px;
+    .one-policy{
+        padding:0 15px;
+    }
+    .wa-ella-polict-text{
+        display: block;
+    }
+}
