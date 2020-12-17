@@ -31,6 +31,7 @@
                         'featured-three-box'  => __( 'Featured Three Box', 'wolfactive-extend-elementor' ),
                         'featured-two-box' => __( 'Featured Two Box', 'wolfactive-extend-elementor' ),
                         'featured-text-on-img' => __( 'Featured Text On Image', 'wolfactive-extend-elementor' ),
+                        'featured-text-on-img-2' => __( 'Featured Text On Image 2', 'wolfactive-extend-elementor' ),
                         'featured-five-box' => __( 'Featured Five Box', 'wolfactive-extend-elementor' ),
                         'featured-slider' => __( 'Featured Slider', 'wolfactive-extend-elementor' ),
                     ],
@@ -208,6 +209,9 @@
             }
             if($settings['featured_style'] === 'featured-slider'){
                 include __DIR__ . '/sections/featured-on-ella/featured-slider.php';
+            }
+            if($settings['featured_style'] === 'featured-text-on-img-2'){
+                include __DIR__ . '/sections/featured-on-ella/featured-text-on-img-2.php';
             }
         }
     }
