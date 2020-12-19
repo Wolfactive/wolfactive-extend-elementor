@@ -28,7 +28,7 @@ export const styles = () => {
   .pipe(sass().on('error', sass.logError))
   .pipe(gulpif(PRODUCTION, postcss([ autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4')])))
   .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
-  .pipe(license('/* Copyright (c) ${year}, Ella Theme - Halosoft - Wolfactive */', {year: year}))
+  .pipe(license('/* Copyright (c) ${year}, Ella Theme - Halosoft - Wolfactive */ ', {year: year}))
   .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
   .pipe(dest('dist/css'))
   .pipe(server.stream());
