@@ -1,7 +1,7 @@
-<div class="<?php _e($class_preflix,'ella') ?>-collection-five-box">
-    <div class="collection-row">
+<div class="<?php _e($class_preflix,'ella') ?>-collection-slider">
+    <div class="collection-row-slider" data-show-item="<?php _e($settings['slider_item'],'ella') ?>">
         <?php foreach (  $settings['list'] as $item ): ?>
-        <div class="col-collection">
+        <div class="col-collection-sldier">
             <a href="<?php echo  $item['link_colection']['url']; ?>" class="one-box-collection">
                 <?php
                         echo '<img src="' . $item['list_image']['url'] . '">';
