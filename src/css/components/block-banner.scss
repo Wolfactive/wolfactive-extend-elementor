@@ -490,3 +490,164 @@
     }
   }
 }
+.wa-ella-block-banner-spotlight {
+  .banner-contain {
+    position: relative;
+    .mc-banner {
+      display: block;
+      img {
+        display: block;
+      }
+    }
+    .block-all-content {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 25px 15px 30px;
+      @include MediaQuery($xs) {
+        position: unset;
+        transform: unset;
+      }
+      .banner-heading {
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 17px;
+        font-size: 40px;
+        color: #232323;
+        @include MediaQuery($xs) {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 17px;
+        }
+        @include MediaQuery($lg) {
+          font-size: 24px;
+        }
+        .line {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          -moz-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          height: 2px;
+          width: 40px;
+          background-color: #232323;
+        }
+      }
+      .banner-des {
+        max-width: 425px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+        font-size: 12px;
+        color: #232323;
+        @include MediaQuery($xs) {
+          font-size: 12px;
+          line-height: 24px;
+          margin-bottom: 23px;
+        }
+        @include MediaQuery($lg) {
+          font-size: 12px;
+          line-height: 24px;
+          margin-bottom: 23px;
+        }
+        padding-bottom: 0;
+      }
+      .block-banner-button {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 13px;
+        line-height: 20px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid;
+        max-width: 100%;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background-color: #232323;
+        border-color: #232323;
+        color: #fff;
+        min-width: 200px;
+        padding: 10px 20px 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        &:hover {
+          background-color: #fff;
+          color: #232323;
+          border-color: #232323;
+        }
+        @include MediaQuery($xs) {
+          min-width: 190px;
+        }
+        @include MediaQuery($lg) {
+          min-width: 190px;
+        }
+      }
+    }
+  }
+  .widget-title {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    @include MediaQuery($xs) {
+      margin-bottom: 25px;
+    }
+    p {
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      line-height: 22px;
+    }
+  }
+  .widget-title .box-title {
+    color: #232323;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 15px;
+    @include MediaQuery($xs) {
+      font-size: 18px;
+    }
+  }
+  .widget-title .box-title:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #e0e0e0;
+    top: -moz-calc(50% - 0.5px);
+    top: -webkit-calc(50% - 0.5px);
+    top: -ms-calc(50% - 0.5px);
+    top: calc(50% - 0.5px);
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .widget-title .box-title .title {
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+  }
+}

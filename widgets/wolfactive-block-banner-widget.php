@@ -32,7 +32,26 @@
                         'block-banner-right'  => __( 'Block Image Right', 'wolfactive-extend-elementor' ),
                         'block-banner-left'  => __( 'Block Image Left', 'wolfactive-extend-elementor' ),
                         'block-banner-text-center'  => __( 'Block Banner Content Center', 'wolfactive-extend-elementor' ),
+                        'block-banner-spotlight'  => __( 'Block Banner Spotlight', 'wolfactive-extend-elementor' ),
                     ],
+                ]
+            );
+            $this->add_control(
+                'spotlight_title', [
+                    'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( '#SPOTLIGHT' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                ]
+            );
+            $this->add_control(
+                'spotlight_description',
+                [
+                    'label' => __( 'Description', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    'rows' => 10,
+                    'default' => __( 'Quisquemos sodales suscipit tortor ditaemcos copy', 'wolfactive-extend-elementor' ),
+                    'placeholder' => __( 'Type your description here', 'wolfactive-extend-elementor' ),
                 ]
             );
             $this->add_control(
@@ -61,7 +80,7 @@
             );
             $this->add_control(
                 'block_banner_title', [
-                    'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Title On Banner', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => __( 'METROPÓLIS' , 'wolfactive-extend-elementor' ),
                     'label_block' => true,
@@ -70,11 +89,19 @@
             $this->add_control(
                 'block_banner_description',
                 [
-                    'label' => __( 'Description', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Description On Banner', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::TEXTAREA,
                     'rows' => 10,
                     'default' => __( 'Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos.', 'wolfactive-extend-elementor' ),
                     'placeholder' => __( 'Type your description here', 'wolfactive-extend-elementor' ),
+                ]
+            );
+            $this->add_control(
+                'name_button', [
+                    'label' => __( 'Name Button', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'shop now' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
                 ]
             );
             $this->add_control(
@@ -104,6 +131,9 @@
             }
             if($settings['block_banner_style'] === 'block-banner-text-center'){
                 include __DIR__ . '/sections/block-banner/block-banner-text-center.php';
+            }
+            if($settings['block_banner_style'] === 'block-banner-spotlight'){
+                include __DIR__ . '/sections/block-banner/block-banner-spotlight.php';
             }
         }
     }
