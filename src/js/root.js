@@ -8,4 +8,4 @@ import "./controls/product-tab-with-banner.js";
 import "./controls/policy.js";
 import "./controls/featured.js";
 import "./controls/collection.js";
-
+import "./components/buttonProductModal.js";

@@ -193,7 +193,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 			'show_elements',
 			[
 				'label' => __( 'Choose Product', 'wolfactive-extend-elementor' ),
-				'type' => \Elementor\Controls_Manager::SELECT2,
+				'type' => \Elementor\Controls_Manager::SELECT,
 				'multiple' => true,
 				'options' => $options,
 				'default' => [],

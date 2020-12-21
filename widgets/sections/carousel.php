@@ -10,6 +10,23 @@
                 <?php
                     echo wp_get_attachment_image( $item['list_image']['id'], 'full' );
                 ?>
+                <?php if($settings['list_child']): ?>
+                <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-image-buttons">
+                    <?php  foreach($settings['list_child'] as $child): ?>
+                    <?php if(($count + 1 )== $child['carousel_choose']):?>
+                    <div 
+                        class="<?php _e($class_preflix,'ella') ?>-carousel-item-image-button" 
+                        data-product ="<?php _e($child['show_elements'],'ella') ?>"
+                        style="position:absolute; top:<?php echo $child['top'] ?>%;left:<?php echo $child['left'] ?>%;"
+                        >
+                        <div class="mc-icon-plus">
+                            <i class="gg-add"></i>
+                        </div>
+                    </div>
+                    <?php endif;?>
+                    <?php  endforeach;?>
+                <?php endif;?>
+                </div>
             </div>
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-contain <?php esc_html_e( $item['location_contain'] , 'wolfactive-extend-elementor' ); ?>">
                 <h3 class="<?php _e($class_preflix,'ella') ?>-carousel-item-title">
