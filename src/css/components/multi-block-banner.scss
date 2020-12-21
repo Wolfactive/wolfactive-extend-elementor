@@ -462,6 +462,20 @@
     &:nth-child(3) {
       flex: 0 0 100%;
       max-width: 100%;
+      .one-block-banner {
+        &::before {
+          display: none;
+        }
+        &:hover {
+          img {
+            -moz-transform: scale3d(1, 1, 1);
+            -o-transform: scale3d(1, 1, 1);
+            -ms-transform: scale3d(1, 1, 1);
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+      }
       .mc-btn-shop-now {
         display: none;
       }
@@ -472,9 +486,9 @@
         text-align: center;
         position: absolute;
         top: 50%;
-        left: 50%;
+        right: 4%;
         z-index: 2;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
         margin-left: auto;
         margin-right: auto;
         padding: 25px 15px 30px;
@@ -555,15 +569,13 @@
           -ms-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
-          background-color: #232323;
-          border-color: #232323;
-          color: #fff;
-          min-width: 270px;
+          background-color: #fff;
+          border-color: #fff;
+          color: #232323;
+          min-width: 237px;
           padding: 10px 20px 8px;
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
           &:hover {
-            background-color: #fff;
-            color: #232323;
             border-color: #232323;
           }
           @include MediaQuery($xs) {
