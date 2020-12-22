@@ -34,6 +34,9 @@ const ajaxProductCreateModal = (data,location) =>{
     const html = data
     .map(item =>{return modalProductContent(item)})
     .join('');
+    let locate = location.getAttribute('data-location'),
+        postion = location.getAttribute('data-position'),
+        closeButton,modalDOM;
     // create modal information
     const modal = `
         <div class="wa-ella-product-modal-info">
@@ -46,5 +49,13 @@ const ajaxProductCreateModal = (data,location) =>{
         </div>
     `;
     location.insertAdjacentHTML('beforeend',modal);
+    modalDOM = location.querySelector('.wa-ella-product-modal-info');
+    locate == 'left' && (modalDOM.style.right = `${postion}%`);
+    if(locate == 'right'){
+        modalDOM.style.left = `0`;
+        modalDOM.style.transform = `translateX(28px)`;
+    }
+    closeButton = modalDOM.querySelector('.close-modal-product .btn');
+    closeButton && (closeButton.onclick = () =>{ modalDOM.remove()})
 } 
 export default ajaxProductCreateModal

@@ -11,7 +11,7 @@ jQuery( document ).ready(function($) {
         $carousel.not('.slick-initialized').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
+          //autoplay: true,
           autoplaySpeed: 5000,
           infinite: true,
           speed: 300,

@@ -1,0 +1,39 @@
+.wa-ella-product-modal-info{
+    position: absolute;
+    padding: 30px;
+    min-width: 270px;
+    z-index: 2000;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.15);
+    box-shadow: 0 1px 4px rgba(0,0,0,.15);
+    background: #fff;
+    opacity: 1;
+    top: -100px;
+    -webkit-transition: all 325ms ease;
+    transition: all 325ms ease;
+    .close-modal-product{
+        .btn{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            right: 0;
+            color: #fff;
+            background: var(--primary-bg-color);
+            border-radius: unset;
+            border: 1px solid var(--primary-bg-color);
+            outline: 0;
+            padding: 0;
+            padding-top: 1px;
+            z-index: 3001;
+            transform: translate(50%,-50%);
+            &:hover{
+                background: #fff;
+                color: var(--primary-color);
+            }
+        }
+    }
+    .modal__content-product-item--contain{
+        position: relative;
+        z-index: 3000;
+    }
+}

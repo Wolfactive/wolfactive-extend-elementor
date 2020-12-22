@@ -183,7 +183,18 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
                 'default' => 0,
             ]
         );
-
+		$repeater_child->add_control(
+            'location_modal',
+            [
+				'label' => __( 'Location Modal', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'left',
+				'options' => [
+					'left'  => __( 'Left', 'wolfactive-extend-elementor' ),
+					'right' => __( 'Right', 'wolfactive-extend-elementor' ),
+				],
+            ]
+        );
         $options = [];
 		$post_array = get_posts('post_type=product&posts_per_page=-1&post_status=publish');
 		foreach($post_array as $post){
