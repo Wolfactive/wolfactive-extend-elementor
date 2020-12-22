@@ -251,6 +251,7 @@ final class Wolfactive_Extend_Elementor {
         require_once( __DIR__ . '/widgets/wolfactive-block-banner-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-multi-block-banner-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-different-collection-widget.php' );
+        require_once( __DIR__ . '/widgets/wolfactive-latest-post-widget.php' );
         // Register posts widget
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );       
@@ -265,6 +266,7 @@ final class Wolfactive_Extend_Elementor {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Block_Banner() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Multi_Block_Banner() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Different_Collection() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Latest_Post() );
     }
 
     public function init_style_script() {

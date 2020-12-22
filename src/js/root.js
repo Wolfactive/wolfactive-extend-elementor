@@ -9,3 +9,4 @@ import "./controls/policy.js";
 import "./controls/featured.js";
 import "./controls/collection.js";
 import "./components/buttonProductModal.js";
+import "./controls/latest-post.js";
