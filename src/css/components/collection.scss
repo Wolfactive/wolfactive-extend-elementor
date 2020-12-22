@@ -111,7 +111,117 @@
     }
   }
 }
-
+.wa-ella-collection-bottom-carousel {
+  .collection-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include MediaQuery($xs) {
+      margin: 0 -10px;
+    }
+  }
+  .col-collection {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    width: 100%;
+    margin-bottom: 30px;
+    @include MediaQuery($xs) {
+      flex: 0 0 50%;
+      max-width: 100%;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .col-collection:last-child {
+    @include MediaQuery($xs) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .one-box-collection {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #232323;
+      overflow: hidden;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      z-index: 2;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    .title-one-collection {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      text-align: center;
+      @include MediaQuery($xs) {
+        width: 90%;
+        text-align: center;
+      }
+    }
+    .title-collection {
+      color: #fff;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
+      position: relative;
+      @include MediaQuery($xs) {
+        font-size: 16px;
+      }
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: -0.3rem;
+        height: 2px;
+        content: "";
+        transition: 0.3s all;
+        background-color: #fff;
+      }
+    }
+    &:hover {
+      .title-collection {
+        &:before {
+          width: 100%;
+          transition: 0.3s all;
+        }
+      }
+      img {
+        -moz-transform: scale3d(1.1, 1.1, 1);
+        -o-transform: scale3d(1.1, 1.1, 1);
+        -ms-transform: scale3d(1.1, 1.1, 1);
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+      }
+      &::before {
+        overflow: visible;
+        opacity: 0.3;
+      }
+    }
+    img {
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -ms-transition: all 0.7s ease;
+      -o-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      display: block;
+    }
+  }
+}
 .wa-ella-collection-five-box {
   .collection-row {
     display: flex;
