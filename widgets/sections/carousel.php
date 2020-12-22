@@ -19,7 +19,7 @@
                         data-product ="<?php _e($child['show_elements'],'ella') ?>" 
                         data-location="<?php _e($child['location_modal'],'ella') ?>"
                         data-position="<?php _e($child['left'],'ella') ?>"
-                        style="position:absolute; top:<?php echo $child['top'] ?>%;left:<?php echo $child['left'] ?>%;"
+                        style="position:absolute; top:<?php echo $child['top'] ?>%;left:<?php echo $child['left'] ?>%; z-index:1000"
                         >
                         <div class="mc-icon-plus">
                             <i class="gg-add"></i>
