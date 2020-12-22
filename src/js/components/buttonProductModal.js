@@ -1,11 +1,12 @@
 import ajaxGetProductInfo from './ajaxGetProductInfo';
 import ajaxProductCreateModal from './ajaxProductCreateModal';
 
-let carouselDOM = document.querySelector('.wa-ella-carousel'),dataCache,parrentCache;
+let carouselDOM = document.querySelector('.wa-ella-carousel'),parrentCache;
 
-async function asyncCall(item) {
-    const result = await ajaxGetProductInfo(item);
-    return result;
+
+async function asyncCallProductInfo(item) {
+    const dataCache = await ajaxGetProductInfo(item);
+    ajaxProductCreateModal(dataCache,item);
 }
 
 if(carouselDOM){
@@ -13,9 +14,7 @@ if(carouselDOM){
     if(buttons.length !== 0){
         buttons.forEach(item =>{
             item.children[0].onclick = () =>{
-                parrentCache = item;
-                dataCache = asyncCall(item);
-                ajaxProductCreateModal(dataCache,item)
+                asyncCallProductInfo(item);
             };
         })
     }

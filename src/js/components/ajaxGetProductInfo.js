@@ -2,7 +2,7 @@
 
 const ajaxGetProductInfo = (item) =>{
     let productID = item.getAttribute('data-product');
-    fetch(`${apiObject.homeurl}/wp-json/get-products/search`,{
+    return fetch(`${apiObject.homeurl}/wp-json/get-products/search`,{
         method: 'POST',
         mode:    'cors',
         headers: {
@@ -15,7 +15,7 @@ const ajaxGetProductInfo = (item) =>{
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        return data.data
     })
 }
 
