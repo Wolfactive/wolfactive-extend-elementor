@@ -30,6 +30,7 @@
                     'default' => 'collection-default',
                     'options' => [
                         'collection-default'  => __( 'Collection Default', 'wolfactive-extend-elementor' ),
+                        'collection-bottom-carousel' => __( 'Collection Bottom Carousel', 'wolfactive-extend-elementor' ),
                         'collection-five-box' => __( 'Collection Five Box', 'wolfactive-extend-elementor' ),
                         'collection-slider' => __( 'Collection Slider', 'wolfactive-extend-elementor' ),
                         'collection-button' => __( 'Collection Button View All', 'wolfactive-extend-elementor' ),
@@ -165,6 +166,9 @@
             $class_preflix = 'wa-ella';
             if($settings['collection_style'] === 'collection-default'){
                 include __DIR__ . '/sections/collection/collection-default.php';
+            }
+            if($settings['collection_style'] === 'collection-bottom-carousel'){
+                include __DIR__ . '/sections/collection/collection-bottom-carousel.php';
             }
             if($settings['collection_style'] === 'collection-five-box'){
                 include __DIR__ . '/sections/collection/collection-five-box.php';
