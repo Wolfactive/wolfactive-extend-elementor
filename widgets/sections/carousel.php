@@ -4,9 +4,11 @@
         <?php $count = 0; foreach (  $settings['list'] as $item ): ?>
         <div class="<?php _e($class_preflix,'ella') ?>-carousel-item">
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-image">
+                <?php if($item['list_title']){ ?>
                 <h3 class="<?php _e($class_preflix,'ella') ?>-carousel-item-image-title">
                     <?php esc_html_e( $item['list_title'] , 'wolfactive-extend-elementor' ); ?>
                 </h3>
+                <?php } ?>
                 <?php
                     echo wp_get_attachment_image( $item['list_image']['id'], 'full' );
                 ?>
