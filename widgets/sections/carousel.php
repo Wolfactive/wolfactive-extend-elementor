@@ -32,6 +32,7 @@
                 <?php endif;?>
                 </div>
             </div>
+            <?php if($item['list_title'] || $item['list_content'] || $item['button_title']): ?>
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-contain <?php esc_html_e( $item['location_contain'] , 'wolfactive-extend-elementor' ); ?>">
                 <?php if($item['list_title']): ?>
                 <h3 class="<?php _e($class_preflix,'ella') ?>-carousel-item-title">
@@ -54,6 +55,7 @@
                 </div>
                 <?php endif; ?>
             </div>
+            <?php endif; ?>
         </div>
         <?php $count++; endforeach; ?>
     </div>
