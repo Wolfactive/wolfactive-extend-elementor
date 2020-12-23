@@ -87,6 +87,7 @@
                     'label_block' => true,
                 ]
             );
+                        
             $this->add_control(
                 'list',
                 [

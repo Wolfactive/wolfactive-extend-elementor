@@ -307,7 +307,7 @@ function ella_check_col_render_class($col_pc,$col_tablet){
     if($col_pc === 5){
         _e('col-divide-5-col','ella');
     }
-    if($col_pc === 5){
+    if($col_pc === 6){
         _e('col-divide-2','ella');
     }
     _e(' ','ella');
@@ -326,7 +326,7 @@ function ella_check_col_render_class($col_pc,$col_tablet){
     if($col_tablet === 5){
         _e('col-divide-lg-5-col','ella');
     }
-    if($col_tablet === 5){
+    if($col_tablet === 6){
         _e('col-divide-lg-2','ella');
     }
 }
