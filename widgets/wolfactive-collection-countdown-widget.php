@@ -33,7 +33,16 @@
                     ],
                 ]
             );
-           
+            $this->add_control(
+                'due_date',
+                [
+                    'label' => __( 'Date Countdown', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::DATE_TIME,
+                    'picker_options' => [
+                        'dateFormat' => 'F j, Y h:i:s',
+                    ],
+                ]
+            );
             $repeater = new \Elementor\Repeater();
             $repeater->add_control(
                 'list_image',
@@ -207,7 +216,7 @@
                     'min' => 1,
                     'max' => 7,
                     'step' => 7,
-                    'default' => 2,
+                    'default' => 1,
                 ]
             );
             $this->end_controls_section();

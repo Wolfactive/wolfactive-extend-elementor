@@ -21,8 +21,8 @@
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="col-collection">
-            <?php foreach (  $settings['list_between'] as $item ): ?>
+        <div class="col-collection between-custom">
+            <?php $countdownt = 0; foreach (  $settings['list_between'] as $item ): ?>
             <div class="col-collec-between mg-30">
                 <a href="<?php echo  $item['link_colection']['url']; ?>" class="one-box-collection">
                     <?php
@@ -39,20 +39,22 @@
                                 Sale up to 60% off on selected items. End ins:
                             </span>
                         </p>
-                        <div class="sub-banner-countdown">
-                            <div class="clock-item"><span class="num">00</span><span class="text-clock">days</span>
+                        <?php if($countdownt == 0){ ?>
+                        <div class="sub-banner-countdown" data-countdown="<?php echo $settings['due_date']; ?>">
+                            <div class="clock-item"><span class="num" id="numberDays">00</span><span class="text-clock">days</span>
                             </div>
-                            <div class="clock-item"><span class="num">00</span><span class="text-clock">hours</span>
+                            <div class="clock-item"><span class="num" id="numberHours">00</span><span class="text-clock">hours</span>
                             </div>
-                            <div class="clock-item"><span class="num">00</span><span class="text-clock">mins</span>
+                            <div class="clock-item"><span class="num" id="numberMins">00</span><span class="text-clock">mins</span>
                             </div>
-                            <div class="clock-item"><span class="num">00</span><span class="text-clock">secs</span>
+                            <div class="clock-item"><span class="num" id="numberSecs">00</span><span class="text-clock">secs</span>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                 </a>
             </div>
-            <?php endforeach; ?>
+            <?php $countdownt++;endforeach; ?>
         </div>
         <div class="col-collection c-right">
             <div class="col-mb">
