@@ -155,10 +155,10 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
             [
                 'label' => __( 'Carousel Add Modal', 'wolfactive-extend-elementor' ),
                 'type' => \Elementor\Controls_Manager::NUMBER,
-                'min' => 1,
+                'min' => 0,
                 'max' => 100,
                 'step' => 100,
-                'default' => 1,
+                'default' => 0,
             ]
         );
         $repeater_child->add_control(
