@@ -4,11 +4,11 @@
         <?php $count = 0; foreach (  $settings['list'] as $item ): ?>
         <div class="<?php _e($class_preflix,'ella') ?>-carousel-item">
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-image">
-                <?php if(is_string($item['list_title'])){ ?>
+                <?php if($item['list_title']): ?>
                 <h3 class="<?php _e($class_preflix,'ella') ?>-carousel-item-image-title">
                     <?php esc_html_e( $item['list_title'] , 'wolfactive-extend-elementor' ); ?>
                 </h3>
-                <?php } ?>
+                <?php endif; ?>
                 <?php
                     echo wp_get_attachment_image( $item['list_image']['id'], 'full' );
                 ?>
@@ -33,9 +33,11 @@
                 </div>
             </div>
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-contain <?php esc_html_e( $item['location_contain'] , 'wolfactive-extend-elementor' ); ?>">
+                <?php if($item['list_title']): ?>
                 <h3 class="<?php _e($class_preflix,'ella') ?>-carousel-item-title">
                     <?php esc_html_e( $item['list_title'] , 'wolfactive-extend-elementor' ); ?>
                 </h3>
+                <?php endif; ?>
                 <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-description">
                     <?php _e( $item['list_content'] , 'wolfactive-extend-elementor' ); ?>
                 </div>
