@@ -35,10 +35,6 @@
                 }
             }
         }
-        margin-bottom: 50px;
-        @include MediaQuery($md){
-            margin-bottom: 40px;
-        }
         .slick-prev, .slick-next{
             top: calc(50% - 86px);
             padding-left: 2px;
