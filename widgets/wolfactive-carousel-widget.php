@@ -58,6 +58,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 				'options' => [
 					'default'  => __( 'Default', 'wolfactive-extend-elementor' ),
 					'decore' => __( 'Decore', 'wolfactive-extend-elementor' ),
+					'limit' => __( 'Limit', 'wolfactive-extend-elementor' ),
 				],
 			]
         );

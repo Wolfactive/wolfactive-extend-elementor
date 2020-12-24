@@ -1,6 +1,7 @@
-<div class="<?php _e($class_preflix,'ella') ?>-carousel">
+<div class="<?php _e($class_preflix,'ella') ?>-carousel <?php if($settings['slider_style'] == 'limit') echo "limit"; ?>">
     <?php if ( $settings['list'] ):  ?>
-    <div class="<?php _e($class_preflix,'ella') ?>-carousel-list" data-speed="<?php echo $settings['speed_slider'] ?>">
+    <div class="<?php _e($class_preflix,'ella') ?>-carousel-list 
+        data-speed="<?php echo $settings['speed_slider'] ?>">
         <?php $count = 0; foreach (  $settings['list'] as $item ): ?>
         <div class="<?php _e($class_preflix,'ella') ?>-carousel-item">
             <div class="<?php _e($class_preflix,'ella') ?>-carousel-item-image">
