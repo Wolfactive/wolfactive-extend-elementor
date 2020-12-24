@@ -1,0 +1,165 @@
+.wa-ella-xmas-video{
+    p{
+        padding-bottom: 0;
+    }
+    .home-custom-block{
+        margin-bottom: 60px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .banner-large-img{
+        position: relative;
+        .img-box{
+            text-align: left;
+            position: relative;
+            img{
+                width: auto;
+                display: block;
+            }
+        }
+    }
+    .banner-content{
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        background: #fff;
+        padding: 70px 70px;
+        transform: translateY(-50%);
+        right: 21%;
+        text-align: left;
+        @include MediaQuery($xs) {
+            padding: 20px;
+            position: unset;
+            transform: none;
+            text-align: center;
+        }
+        @include MediaQuery($sm) {
+            right: calc((100% - 730px)/2) !important;
+            padding: 40px 40px;
+        }
+        @include MediaQuery(1024px) {
+            right: calc((100% - 950px)/2);
+            padding: 70px 70px;
+        }
+        .banner-sub-heading{
+            font-size: 13px;
+            color: #c72e27;
+            font-weight: 600;
+            letter-spacing: .05em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 11px;
+            span{
+                background-image: linear-gradient(transparent 97%, #c72e27 3%);
+                background-repeat: repeat-x;
+                background-position-y: -1px;
+            }
+        }
+        .banner-heading{
+            font-size: 40px;
+            color: #232323;
+            font-weight: 600;
+            letter-spacing: .02em;
+            text-transform: capitalize;
+            padding-bottom: 5px;
+            margin-bottom: 22px;
+            @include MediaQuery(1024px) {
+                font-size: 24px ;
+                line-height: 32px;
+                margin-bottom: 17px;
+            }
+        }
+        .banner-des{
+            font-size: 12px;
+            color: #3c3c3c;
+            margin-left: 0;
+            margin-bottom: 45px;
+            max-width: 425px;
+            margin-right: auto;
+            line-height: 20px;
+            @include MediaQuery(1024px) {
+                font-size: 12px ;
+            }
+        }
+        .banner-button{
+            background-color: #4dac4c;
+            border-color: #4dac4c;
+            color: #fff;
+            min-width: 248px;
+            padding: 15px 25px 13px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            font-size: 13px;
+            line-height: 20px;
+            outline: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border: 1px solid rgba(255,255,255,0);
+            max-width: 100%;
+            transition: 0.3s all;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            @include MediaQuery(1024px) {
+                min-width: 190px;
+            }
+            &:hover{
+                background-color: #fff;
+                color: #232323;
+                border-color: #232323;
+            }
+        }
+    }
+    .video-open-popup{
+        .icon-video{
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 26%;
+            z-index: 2;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            transform: translateY(-50%);
+            @include MediaQuery($xs) {
+                left: 15px;
+                bottom: 15px;
+                transform: none;
+                top: auto;
+            }
+            @include MediaQuery($sm) {
+                left: 15px !important;
+                bottom: 15px;
+                transform: none;
+                top: auto;
+            }
+            @include MediaQuery(1024px) {
+                left: 15%;
+            }
+            svg{
+                fill: currentColor;
+                stroke: currentColor;
+                width: 128px;
+                height: 128px;
+                overflow: hidden;
+                @include MediaQuery($xs) {
+                    width: 50px !important;
+                    height: 50px !important;
+                }
+                @include MediaQuery($sm) {
+                    width: 80px ;
+                    height: 80px;
+                }
+            }
+        }
+        
+    }
+}
