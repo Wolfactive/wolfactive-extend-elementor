@@ -1,0 +1,152 @@
+.wa-ella-xmas-collection{
+    .banner-large-img{
+        position: relative;
+    }
+    .img-box{
+        text-align: center;
+        img{
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1;
+            transition: opacity 300ms;
+        }
+    }
+    .img-center{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        z-index: 1;
+        @include MediaQuery($xs) {
+            top: 6% !important;
+        }
+        @include MediaQuery($sm) {
+            top: 10%;
+        }
+        .img-top{
+            position: absolute;
+            top: 5px;
+            right: 35px;
+            z-index: 2; 
+            @include MediaQuery($xs) {
+                right: 25px !important;
+                max-width: 30px !important;
+            }
+            @include MediaQuery($sm) {
+                right: 35px;
+                max-width: 60px;
+            }
+            img{
+                animation-name: anumation_image;
+                animation-duration: 1s;
+                animation-timing-function: ease-in;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                position: relative;
+            }
+        }
+        img{
+            animation-name: anumation_image;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            position: relative;
+        }
+        @keyframes  anumation_image{
+            from {
+              top: -15px;
+              width: 100%;
+            }
+            to {
+              top: 20px;
+              width: 100%;
+            }
+        }
+    }
+    .banner-content{
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        left: calc((100% - 1200px)/2);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px 15px 30px;
+        @include MediaQuery($xs) {
+            position: unset;
+            text-align: center;
+            -moz-transform: unset;
+            -o-transform: unset;
+            -ms-transform: unset;
+            -webkit-transform: unset;
+            transform: unset;
+        }
+        @include MediaQuery($sm) {
+            left: calc((100% - 730px)/2) !important;
+        }
+        @include MediaQuery(1024px) {
+            left: calc((100% - 950px)/2);
+        }
+        .banner-heading{
+            font-size: 13px;
+            color: #e95144;
+            font-weight: 600;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            position: relative;
+            span{
+                background-image: linear-gradient(transparent 97%, #e95144 3%);
+                background-repeat: repeat-x;
+                background-position-y: -1px;
+            }
+        }
+        .banner-des{
+            font-size: 40px;
+            color: #232323;
+            font-weight: 600;
+            line-height: 60px;
+            max-width: 425px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 35px;
+            @include MediaQuery($xs) {
+                font-size: 12px !important;
+            }
+            @include MediaQuery(1024px) {
+                font-size: 12px ;
+            }
+        }
+        .banner-button{
+            display: inline-block;
+            background-color: #4dac4c;
+            border-color: #4dac4c ;
+            color: #fff;
+            min-width: 167px;
+            padding: 15px 25px 13px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            letter-spacing: .05em;
+            font-size: 13px;
+            line-height: 20px;
+            outline: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-transform: uppercase;
+            max-width: 100%;
+            border: 1px solid rgba(255,255,255,0);
+            text-align: center;
+        }
+    }
+
+}
