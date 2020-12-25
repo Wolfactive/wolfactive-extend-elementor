@@ -465,7 +465,10 @@
 }
 
 .wa-ella-collection-button-view-all {
-  .slick-dots {
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
+  }
+  .slick-dots { 
     display: none !important;
   }
   .slick-arrow {
@@ -497,12 +500,11 @@
     top: 50%;
     z-index: 1;
   }
-  .collection-row {
+  .collection-row-slider {
     margin: 0 -15px;
   }
-  .col-collection-sldier {
+  .col-collection {
     padding: 0 15px;
-    // margin-bottom: 30px;
   }
   .one-box-collection {
     position: relative;
