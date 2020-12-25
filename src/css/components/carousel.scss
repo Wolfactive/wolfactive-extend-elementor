@@ -157,6 +157,13 @@
                 }
             }
         }
+        &.no-spacing-bottom{
+            .slick-dotted.slick-slider{
+                @media screen and (min-width: 1280px) {
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
     }
     &-carousel-item{
         position: relative;

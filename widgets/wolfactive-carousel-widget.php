@@ -62,7 +62,19 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 				],
 			]
         );
-        
+		
+		$this->add_control(
+			'spacing_toggle',
+			[
+				'label' => __( 'Spacing Bottom', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'wolfactive-extend-elementor' ),
+				'label_off' => __( 'Hide', 'wolfactive-extend-elementor' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
         /* Begin Carousel Item Repeater */
         $repeater = new \Elementor\Repeater();
         /* Begin Repeater for modal product */
