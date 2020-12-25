@@ -149,9 +149,29 @@
                 ]
             );
             $this->add_control(
+                'bg_toggle',
+                [
+                    'label' => __( 'Background Toggle', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'yes',
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'collection_style',
+                                'operator' => '==',
+                                'value' => 'collection-button-shop-now'
+                            ],
+                        ]
+                    ]
+                ]
+            );
+            $this->add_control(
                 'slider_item',
                 [
-                    'label' => __( 'Instagram Item', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Item Column', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 7,

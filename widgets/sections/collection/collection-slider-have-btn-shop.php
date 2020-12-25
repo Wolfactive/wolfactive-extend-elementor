@@ -1,4 +1,5 @@
-<div class="<?php _e($class_preflix,'ella') ?>-collection-button-shop-now">
+<div class="<?php _e($class_preflix,'ella') ?>-collection-button-shop-now" 
+            <?php if($settings['bg_toggle'] == 'yes') echo "have--background"?>>
     <div class="collection-row-slider" data-show-item="<?php _e($settings['slider_item'],'ella') ?>">
         <?php foreach (  $settings['list'] as $item ): ?>
         <div class="col-collection-sldier">
