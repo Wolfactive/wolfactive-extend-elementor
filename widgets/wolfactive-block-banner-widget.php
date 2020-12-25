@@ -107,7 +107,7 @@
             $this->add_control(
                 'slider_item',
                 [
-                    'label' => __( 'Brand Item', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Block Banner Item', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 7,

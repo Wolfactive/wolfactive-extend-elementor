@@ -276,6 +276,10 @@ final class Wolfactive_Extend_Elementor {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Collection() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Block_Banner() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Video() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Customer() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Instagram() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Policy() );
+        Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Newsletter() );
     }
 
     public function init_style_script() {
