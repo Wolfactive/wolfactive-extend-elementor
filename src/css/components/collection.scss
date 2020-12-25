@@ -672,7 +672,7 @@
     display: none !important;
   }
   padding: 70px 3.175%;
-  &.have--background{
+  &.have-background{
     background-color: #f8f8f8;
   }
   @include MediaQuery($xs) {
