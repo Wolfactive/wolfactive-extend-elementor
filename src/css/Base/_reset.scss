@@ -1,3 +1,7 @@
+img{
+  image-rendering: pixelated;
+  filter: blur(0);
+}
 .slick-slider{
     *{
         &:focus{
