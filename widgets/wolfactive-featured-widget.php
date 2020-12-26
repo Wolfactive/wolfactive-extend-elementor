@@ -46,6 +46,32 @@
                 ]
             );
             $this->add_control(
+                'toggle_title_line',
+                [
+                    'label' => __( 'Toggle Title Line', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'yes',
+                    'conditions' => [
+                        'relation' => 'and',
+                        'terms' => [
+                            [
+                                'name' => 'featured_style',
+                                'operator' => '!=',
+                                'value' => 'featured-slider'
+                            ],
+                            [
+                                'name' => 'featured_style',
+                                'operator' => '!=',
+                                'value' => 'featured-text-on-img'
+                            ],
+                        ]
+                    ]
+                ]
+            );
+            $this->add_control(
                 'featured_description',
                 [
                     'label' => __( 'Description', 'wolfactive-extend-elementor' ),

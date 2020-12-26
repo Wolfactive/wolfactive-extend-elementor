@@ -1,6 +1,6 @@
 
 <div class="<?php _e($class_preflix,'ella') ?>-featured"> 
-    <h3 class="featured-title">
+    <h3 class="featured-title <?php if($settings['toggle_title_line'] == 'yes') echo 'have-line' ?>">
         <span><?php _e($settings['featured_title'],'ella') ?></span>
     </h3>
     <div class="feature-row">

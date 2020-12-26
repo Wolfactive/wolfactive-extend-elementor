@@ -8,18 +8,20 @@
         position: relative;
         margin-bottom: 45px;
         text-align: center;
-        &:before{
-            position: absolute;
-            content: "";
-            height: 1px;
-            background-color: #e0e0e0;
-            top: -moz-calc(50% - 0.5px);
-            top: -webkit-calc(50% - 0.5px);
-            top: -ms-calc(50% - 0.5px);
-            top: calc(50% - 0.5px);
-            left: 0;
-            right: 0;
-            width: 100%;
+        &.have-line{
+            &:before{
+                position: absolute;
+                content: "";
+                height: 1px;
+                background-color: #e0e0e0;
+                top: -moz-calc(50% - 0.5px);
+                top: -webkit-calc(50% - 0.5px);
+                top: -ms-calc(50% - 0.5px);
+                top: calc(50% - 0.5px);
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
         }
         span{
             padding: 0 24px;
