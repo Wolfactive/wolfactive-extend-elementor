@@ -14,7 +14,7 @@
         <?php $count=0; foreach($settings['show_elements'] as $post): ?>
         <div class="<?php 
             _e($class_preflix,'ella') ?>-product-list-contain-item col-divide-sm-6 col-divide-md-3 <?php ella_check_col_render_class($settings['slider_item_pc'],$settings['slider_item_tablet']) ?>
-            <?php if($count >= (int)$settings['slider_item_pc']*2){_e('d--none','ella');}  ?>
+            <?php if($count >= (int)$settings['slider_item_pc']* (int)$settings['row_item_pc']){_e('d--none','ella');}  ?>
             ">
             <?php  
                 $params = array(
@@ -32,7 +32,7 @@
         </div>
         <?php $count++; endforeach; ?>
     </div>
-    <?php if(count($settings['show_elements']) > (int)$settings['slider_item_pc']*2): ?>
+    <?php if(count($settings['show_elements']) > (int)$settings['slider_item_pc']* (int)$settings['row_item_pc']): ?>
     <div class="<?php _e($class_preflix,'ella') ?>-product-list-control">
         <button class="<?php _e($class_preflix,'ella') ?>-product-list-control-button" aria-label="load-more-button-product-list">
             <?php _e($settings['button_title'],'ella') ?>

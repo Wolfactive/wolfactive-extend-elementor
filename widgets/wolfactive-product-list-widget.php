@@ -106,6 +106,7 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
                 'default' => 3,
             ]
         );
+
         
         $this->add_control(
 			'slider_style',
@@ -120,6 +121,27 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
 			]
         );
         
+        $this->add_control(
+            'row_item_pc',
+            [
+                'label' => __( 'Row Product Item ', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 3,
+                'step' => 1,
+                'default' => 2,
+                'conditions' => [
+                    'terms' => [
+                        [
+                            'name' => 'slider_style',
+                            'operator' => '==',
+                            'value' => 'loadmore'
+                        ],
+                    ]
+                ]
+            ]
+        );
+
         $this->add_control(
 			'button_title', [
 				'label' => __( 'Button Content (Fill if you choose slider style)', 'wolfactive-extend-elementor' ),
