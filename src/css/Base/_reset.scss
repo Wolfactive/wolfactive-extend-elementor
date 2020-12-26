@@ -75,6 +75,9 @@ img{
           *{
             color: #fff !important;
           }
+          i.fab.fa-facebook-f{
+            background-color: transparent!important;
+          }
         }
         .header__center-container{
           color: #fff !important;
@@ -86,9 +89,6 @@ img{
             a{
               i{
                 color: #fff !important;
-                &.fab.fa-facebook-f{
-                  background-color: transparent!important;
-                }
               }
             }
           }
