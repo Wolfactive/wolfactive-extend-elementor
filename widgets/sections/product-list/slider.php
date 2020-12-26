@@ -12,7 +12,7 @@
     <?php if($settings['show_elements']):?>
     <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain" data-show-pc="<?php _e($settings['slider_item_pc'],'ella'); ?>" data-show-tablet="<?php _e($settings['slider_item_tablet'],'ella'); ?>">
         <?php foreach($settings['show_elements'] as $post): ?>
-        <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain-item">
+        <div class="<?php _e($class_preflix,'ella') ?>-product-list-contain-item <?php if($settings['toggle_product_item_style'] == 'yes') echo 'supermarket'?>">
             <?php  
                 $params = array(
                     'p' => (int)$post, 

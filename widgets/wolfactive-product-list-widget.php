@@ -106,7 +106,17 @@ class Wolfactive_Elementor_Product_list extends \Elementor\Widget_Base {
                 'default' => 3,
             ]
         );
-
+        $this->add_control(
+            'toggle_product_item_style',
+            [
+                'label' => __( 'Toggle Product Item Supermarket', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
         
         $this->add_control(
 			'slider_style',

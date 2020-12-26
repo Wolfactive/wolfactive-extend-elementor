@@ -145,5 +145,62 @@
                 }
             }
         }
+        &-contain-item{
+            &.supermarket{
+                .product-item{
+                    .product-item__overlay{
+                        .product-item__star{
+                            display: none;
+                        }
+                    }
+                    .product-item__contain{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .product-item__thumbnail{
+                            margin-bottom: 15px;
+                        }
+                        .product-item__collection,.product-item__title,.product-item__price{
+                            text-align: left!important;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                        .product-item__collection{
+                            margin-bottom: 4px;
+                            order: 1;
+                        }
+                        .product-item__title{
+                            margin-bottom: 4px;
+                            line-height: 22px;
+                            order: 2;
+                        }
+                        .product-item__price{
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 22px;
+                            letter-spacing: normal;
+                            order: 3;
+                        }
+                        .product-item__star{
+                            display: block!important;
+                            text-align: left!important;
+                            margin-bottom: 18px;
+                            margin-top: -6px;
+                            order: 4;
+                            i{
+                                padding: 0 2px;
+                                font-size: 105% !important;
+                                margin: 0;
+                                color: #ffc712;
+                                &:first-of-type{
+                                    padding: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
