@@ -86,6 +86,9 @@ img{
             a{
               i{
                 color: #fff !important;
+                &.fab.fa-facebook-f{
+                  background-color: transparent!important;
+                }
               }
             }
           }
