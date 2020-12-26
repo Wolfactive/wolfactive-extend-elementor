@@ -1,6 +1,6 @@
 
 <div class="<?php _e($class_preflix,'ella') ?>-latest-post"> 
-    <h3 class="latest-post-title">
+    <h3 class="latest-post-title <?php if($settings['toggle_title_line']) echo 'have-line' ?>">
         <span><?php _e($settings['latest_post_title'],'ella') ?></span>
     </h3>
     <p class="desc-mc-lt">
