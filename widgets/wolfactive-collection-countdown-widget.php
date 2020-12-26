@@ -211,7 +211,7 @@
             $this->add_control(
                 'slider_item',
                 [
-                    'label' => __( 'Instagram Item', 'wolfactive-extend-elementor' ),
+                    'label' => __( 'Collection Item', 'wolfactive-extend-elementor' ),
                     'type' => \Elementor\Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 7,

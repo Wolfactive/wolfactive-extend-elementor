@@ -1,0 +1,196 @@
+.wa-ella-xmas-customer-speak{
+    background: #f7f9fb;
+    padding: 60px 0 95px 0;
+    .slick-dots {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        letter-spacing: -0.33em;
+        line-height: 0;
+        position: unset;
+      }
+      .slick-dots li.slick-active {
+        border-color: #828282;
+        button {
+          background: rgba(255, 255, 255, 0);
+          border-color: #505656;
+        }
+      }
+      .slick-dots li {
+        display: inline-block;
+        font-size: 0px;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        letter-spacing: normal;
+        button {
+          width: 12px;
+          height: 12px;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid#707979;
+          background:#707979;
+          padding: 0;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+      .slick-dots li button:before {
+        display: none;
+      }
+    .slick-dots{
+        display: none !important;
+        @include MediaQuery(1024px) {
+            display: block !important;
+            padding-top: 22px;
+          }
+    }
+    @include MediaQuery($sm) {
+        padding: 30px 0 40px 0;
+      }
+    .slick-arrow {
+        display: block;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 1px solid #d7dae0;
+        color: #323232;
+        background: #fff;
+        // padding-left: 6px;
+        &:hover {
+          color: #fff;
+          background: #323232;
+          transition: 0.5s all;
+        }
+      }
+      .slick-prev {
+        padding-left: 6px;
+        position: absolute;
+        left: -55px;
+        top: 50%;
+        z-index: 1;
+      }
+      .slick-next {
+        padding-left: 6px;
+        position: absolute;
+        right: -55px;
+        top: 50%;
+        z-index: 1;
+      }
+    .widget-title{
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 25px;
+        .box-title{
+            color: #232323;
+            font-size: 20px;
+            letter-spacing: .05em;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            margin-bottom: 15px;
+            @include MediaQuery($xs) {
+                font-size: 16px;
+              }
+        }
+    }
+    .slider-customer-speak{
+        margin: 0 -15px;
+    }
+    .one-box-customer{
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 5px;
+        padding:0 15px;
+        
+        .background-one-col{
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #f6f7f8;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            -ms-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .item-image{
+            margin-bottom: 30px;
+            margin-top: -75px;
+            img{
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+        .heading-review{
+            font-weight: 500;
+            color: #232323;
+            font-size: 20px;
+            letter-spacing: .02em;
+            margin-bottom: 18px;
+        }
+        .body-review{
+            color: #3c3c3c;
+            font-size: 12px;
+            font-weight: 400;
+            max-width: 450px;
+            margin: 0 auto 15px auto;
+            line-height: 20px;
+        }
+        .star-reviews{
+            margin-bottom: 8px;
+            svg{
+                fill: #faa900;
+                width: 14px;
+                height: 14px;
+                stroke: none;
+                overflow: hidden;
+            }
+        }
+        .title-reviews{
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 20px;
+            letter-spacing: normal;
+            .purchased-text{
+                display: inline-block;
+                color: #999999;
+                font-weight: 400;
+            }
+            .title{
+                display: inline-block;
+                h4{
+                    color: #999999;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    margin-bottom: 0px;
+                    letter-spacing: .02em;
+                }
+            }
+        }
+        .name-review{
+            h5{
+                color: #4dac4c;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: capitalize;
+                letter-spacing: .02em;
+                margin-bottom: 0; 
+            }
+        }
+        .date-review{
+            color: #999999;
+            letter-spacing: .02em;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 26px;
+        }
+    }
+    .elementor-lightbox .elementor-lightbox-image, .elementor-lightbox .elementor-video-container{
+      box-shadow: none;
+      -webkit-border-radius: none;
+      border-radius: none;
+    }
+}

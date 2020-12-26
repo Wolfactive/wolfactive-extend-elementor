@@ -1,0 +1,89 @@
+.wa-ella-xmas-policy{
+    border-top: 1px solid #f8f8f8;
+    margin-bottom: 42px;
+    padding-top: 44px;
+    .slick-arrow {
+        display: block;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 1px solid #d7dae0;
+        color: #323232;
+        background: #fff;
+        // padding-left: 6px;
+        &:hover {
+          color: #fff;
+          background: #323232;
+          transition: 0.5s all;
+        }
+        @include MediaQuery($sm) {
+            height: 20px;
+            width: 20px;
+            border: 1px solid #fff;
+          }
+      }
+      .slick-prev {
+        padding-left: 6px;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        z-index: 1;
+        @include MediaQuery($sm) {
+            left: -12px;
+          }
+      }
+      .slick-next {
+        padding-left: 6px;
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        z-index: 1;
+      }
+    .policy_xmas{
+        a{
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            align-items: center;
+            .policy-icon{
+                font-size: 40px;
+                margin-right: 25px;
+                i{
+                    color: #e95144;
+                    transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                    -webkit-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);
+                    -ms-transform: rotateY(180deg);
+                }
+            }
+            .policy-text{
+                letter-spacing: .02em;
+                position: relative;
+                top: 4px;
+                text-align: left;
+                span{
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-transform: none;
+                    letter-spacing: .02em;
+                }
+                p{
+                    padding-bottom: 0;
+                    span{
+                        color: #999999;
+                        text-transform: none;
+                        letter-spacing: .02em;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -12,3 +12,5 @@ import "./components/buttonProductModal.js";
 import "./controls/latest-post.js";c
 import "./controls/collection-countdown.js";
 import "./controls/xmas/xmas-carousel.js";
+import "./controls/xmas/xmas-customer.js";
+import "./controls/xmas/xmas-policy.js";
