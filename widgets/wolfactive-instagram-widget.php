@@ -88,6 +88,28 @@
                     'default' => 5,
                 ]
             );
+            $this->add_control(
+                'toggle_bg',
+                [
+                    'label' => __( 'Toggle Background', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'yes',
+                ]
+            );
+            $this->add_control(
+                'toggle_title_line',
+                [
+                    'label' => __( 'Toggle Title Line', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'yes',
+                ]
+            );
             $this->end_controls_section();
         }
         protected function render() {

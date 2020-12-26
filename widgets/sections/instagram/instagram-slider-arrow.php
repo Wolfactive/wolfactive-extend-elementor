@@ -1,5 +1,5 @@
-<div class="<?php _e($class_preflix,'ella') ?>-instagram">
-    <h3 class="<?php _e($class_preflix,'ella') ?>-title-instagram">
+<div class="<?php _e($class_preflix,'ella') ?>-instagram <?php if($settings['toggle_bg'] == 'yes') echo "background" ?>">
+    <h3 class="<?php _e($class_preflix,'ella') ?>-title-instagram <?php if($settings['toggle_title_line'] == 'yes') echo "line" ?>">
         <div class="mc-dp-flex">
             <p class="wa-icon-instagram"><i class="fab fa-instagram"></i></p>
             <p class="mc-text-title-inst"><?php _e($settings['instagram_title'],'ella') ?></p>
