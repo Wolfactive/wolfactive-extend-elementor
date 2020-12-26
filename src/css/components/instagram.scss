@@ -22,12 +22,12 @@
             display: flex;
             position: relative;
             z-index: 2;
-            background:#fafafa;
+            background: transparent;
             padding: 0 24px;
         }
         &.line{
             .mc-dp-flex{
-                background: transparent;
+                background:#fafafa;
             }
             &::before{
                 position: absolute;
