@@ -26,6 +26,9 @@
             padding: 0 24px;
         }
         &.line{
+            .mc-dp-flex{
+                background: transparent;
+            }
             &::before{
                 position: absolute;
                 content: "";
