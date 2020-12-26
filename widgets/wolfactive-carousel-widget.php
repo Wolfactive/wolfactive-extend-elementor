@@ -76,6 +76,65 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'logo_image',
+			[
+				'label' => __( 'Choose White Logo', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [  
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+				'conditions' => [
+					'terms' => [
+						[
+							'name' => 'slider_style',
+							'operator' => '==',
+							'value' => 'absoblute'
+						],
+					]
+				]
+			]
+		);
+		
+		$this->add_control(
+			'cart_image',
+			[
+				'label' => __( 'Choose White Cart Icon', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [  
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+				'conditions' => [
+					'terms' => [
+						[
+							'name' => 'slider_style',
+							'operator' => '==',
+							'value' => 'absoblute'
+						],
+					]
+				]
+			]
+		);
+		
+		$this->add_control(
+			'notification',
+			[
+				'label' => __( 'Important Note', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::RAW_HTML,
+				'raw' => __( '<p style="margin: 8px 0px;padding: 8px 0px;color: #333;font-size: 13px;font-weight: 600;border-top: 1px solid #333;border-bottom: 1px solid #333;">This style is worked if you choose header template 3</p>', 'wolfactive-extend-elementor' ),
+				'content_classes' => '',
+				'conditions' => [
+					'terms' => [
+						[
+							'name' => 'slider_style',
+							'operator' => '==',
+							'value' => 'absoblute'
+						],
+					]
+				]
+			]
+        );
+
         /* Begin Carousel Item Repeater */
         $repeater = new \Elementor\Repeater();
         /* Begin Repeater for modal product */

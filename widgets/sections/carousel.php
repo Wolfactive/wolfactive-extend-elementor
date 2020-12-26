@@ -2,7 +2,9 @@
             <?php if($settings['slider_style'] == 'limit') echo "limit"; ?>
             <?php if($settings['spacing_toggle'] != 'yes') echo "no-spacing-bottom"?>
             <?php if($settings['slider_style'] == 'absoblute') echo "header--float"; ?>"
-            <?php if($settings['slider_style'] == 'absoblute') echo 'data-header="header--float"'; ?>>
+            <?php if($settings['slider_style'] == 'absoblute') echo 'data-header="header--float"'; ?>
+            <?php if($settings['slider_style'] == 'absoblute'): ?> data-logo="<?php echo  $settings['logo_image']['url']  ?>" <?php endif; ?>
+            <?php if($settings['slider_style'] == 'absoblute'): ?> data-icon="<?php echo  $settings['cart_image']['url']?>" <?php endif; ?>>
     <?php if ( $settings['list'] ):  ?>
     <div class="<?php _e($class_preflix,'ella') ?>-carousel-list 
         data-speed="<?php echo $settings['speed_slider'] ?>">

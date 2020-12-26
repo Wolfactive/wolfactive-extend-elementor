@@ -55,3 +55,78 @@ img{
       margin-top: 0px;
     }
   }
+  .recent-view--button{
+    z-index: 3;
+  }
+  /* Header configure from carousel*/
+  header{
+    &.header--float{
+      @media screen and (min-width: 1280px) {
+        position: absolute;
+        z-index: 2;
+        background-color: transparent;
+        width: 100%;
+        .wcml-vertical-list.product.wcml_currency_switcher ul::after,
+        .wpml-ls-statics-shortcode_actions.wpml-ls.wpml-ls-legacy-list-vertical ul::after{
+          color: #fff !important;
+        }
+        .header__top-container{
+          background-color: transparent !important;
+          *{
+            color: #fff !important;
+          }
+        }
+        .header__center-container{
+          color: #fff !important;
+          .header__center-right{
+            .number{
+              background-color: #e95144 !important;
+              color: #fff !important;
+            }
+            a{
+              i{
+                color: #fff !important;
+              }
+            }
+          }
+        }
+        .navbar-template-white-back{  
+          border-bottom: none;
+          background-color: transparent !important;
+          .navbar__contain{
+            .menu{
+              &>li{
+                &>a{
+                  color: #fff !important;
+                }
+              }
+            }
+          }
+          &.fixed{
+            background-color: #fff !important;
+            .navbar__contain{
+              .menu{
+                &>li{
+                  &>a{
+                    color: var(--primary-color) !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .sub-menu{
+          background-color: #fff!important;
+          
+        }
+      }
+    }
+  }
+  .elementor-control-raw-html.noti-elementor-carousel-style{
+  padding: 15px 0px;
+  color: #e95144;
+  font-size: 16px;
+  font-weight: 700;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}

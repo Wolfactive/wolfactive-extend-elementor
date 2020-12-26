@@ -1,3 +1,4 @@
+import changeLayoutHeader from '../components/changeLayoutHeader';
 jQuery( document ).ready(function($) {
   let elementorEditorCheck = document.querySelector('body.elementor-editor-active');
   function carouselInit () {
@@ -25,6 +26,7 @@ jQuery( document ).ready(function($) {
         })
       }
     }
+    changeLayoutHeader();
   }
   if(elementorEditorCheck){
     setInterval(carouselInit, 500);

@@ -311,16 +311,34 @@
             }
         }
     }
-    &.header--float{
-        &-carousel-item{
+    &-carousel{
+        &.header--float{
             position: relative;
-            &-image{
-                img{
-                    display: block; 
-                    width: 100vw;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center center;
+            z-index: 0;
+            .wa-ella-carousel-item{
+                position: relative;
+                &-image{
+                    position: relative;
+                    img{
+                        display: block; 
+                        width: 100vw;
+                        height: 100vh;
+                        object-fit: cover;
+                        object-position: center center;
+                        position: relative;
+                        z-index: 0;
+                    }
+                    &::after{
+                        content: "";
+                        top: 0px;
+                        left: 0px;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        z-index: 2;
+                        background-color: #02020215;
+                    }
                 }
             }
         }
