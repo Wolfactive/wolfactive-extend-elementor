@@ -93,16 +93,18 @@
                 display: inline-block;
                 margin: 0 0 10px 0!important;
             }
-            &::before{
-                position: absolute;
-                content: "";
-                height: 1px;
-                background-color: #e0e0e0;
-                top: calc(50% - 0.5px);
-                left: 0;
-                right: 0;
-                width: 100%;
-                z-index: 0;
+            .have-line{
+                &::before{
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    background-color: #e0e0e0;
+                    top: calc(50% - 0.5px);
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    z-index: 0;
+                }
             }
         }
         &-description{
