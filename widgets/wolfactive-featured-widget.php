@@ -53,7 +53,7 @@
                     'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
                     'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
                     'return_value' => 'yes',
-                    'default' => 'yes',
+                    'default' => 'no',
                     'conditions' => [
                         'relation' => 'and',
                         'terms' => [
