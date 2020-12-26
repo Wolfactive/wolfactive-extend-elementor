@@ -213,15 +213,17 @@
             position: relative;
             padding-bottom: 17px;
             text-transform: uppercase;
-            &::after{
-                content: '';
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translateX(-50%);
-                height: 2px;
-                width: 40px;
-                background-color: #232323;
+            &.have-line{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    height: 2px;
+                    width: 40px;
+                    background-color: #232323;
+                }
             }
             @include MediaQuery($xs){
                 display: none;

@@ -1,5 +1,5 @@
 <div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--loadmore">
-    <h3 class="<?php _e($class_preflix,'ella') ?>-product-list-title">  
+    <h3 class="<?php _e($class_preflix,'ella') ?>-product-list-title <?php if($settings['toggle_title_line'] == 'yes') echo "have-line" ?> ">  
         <span>
             <?php _e($settings['title'],'ella') ?>
         </span>
