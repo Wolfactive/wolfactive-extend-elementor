@@ -3,9 +3,6 @@
     p{
         padding-bottom: 0;
     }
-    &.background{
-        background:#fafafa;
-    }
     padding: 57px 0 70px;
     .wa-ella-title-instagram{
         display: flex;
@@ -26,9 +23,6 @@
             padding: 0 24px;
         }
         &.line{
-            .mc-dp-flex{
-                background:#fafafa;
-            }
             &::before{
                 position: absolute;
                 content: "";
@@ -42,6 +36,28 @@
                 right: 0;
                 width: 100%;
             } 
+        }
+    }
+    &.background{
+        background:#fafafa;
+        .wa-ella-title-instagram{
+            display: flex;
+            position: relative;
+            color: #232323;
+            font-size: 20px;
+            letter-spacing: .05em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 13px;
+            justify-content: center;
+            .mc-dp-flex{
+                justify-content: center;
+                display: flex;
+                position: relative;
+                z-index: 2;
+                background:#fafafa;
+                padding: 0 24px;
+            }
         }
     }
     .wa-icon-instagram{

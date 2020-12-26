@@ -311,6 +311,20 @@
             }
         }
     }
+    &.header--float{
+        &-carousel-item{
+            position: relative;
+            &-image{
+                img{
+                    display: block; 
+                    width: 100vw;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+    }
 }
 
 .modal__content-product-item--contain .modal__content-product-item--thumb{
