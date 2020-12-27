@@ -1,6 +1,6 @@
 <div class="<?php _e($class_preflix,'ella') ?>-product-tab">
     <?php if($settings['title']):?>
-    <h3 class="<?php _e($class_preflix,'ella') ?>-product-tab-title">
+    <h3 class="<?php _e($class_preflix,'ella') ?>-product-tab-title <?php if($settings['toggle_title_line'] == 'yes') echo "have-line" ?>">
         <span>
             <?php _e($settings['title'],'ella') ?>
         </span>

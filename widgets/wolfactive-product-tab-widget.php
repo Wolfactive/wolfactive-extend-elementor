@@ -68,7 +68,17 @@ class Wolfactive_Elementor_Product_tab extends \Elementor\Widget_Base {
 				],
 			]
         );
-
+        $this->add_control(
+            'toggle_title_line',
+            [
+                'label' => __( 'Toggle Title Line', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
         $this->add_control(
             'slider_item_pc',
             [
