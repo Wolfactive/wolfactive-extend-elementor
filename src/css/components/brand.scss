@@ -90,5 +90,26 @@
                 width: 90% !important;
             }
         }
+        .slick-dots{
+            display: block;
+            li{
+                button{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 1px solid #707979;
+                    background: #707979;
+                    padding: 0;
+                    outline: none;
+                    cursor: pointer;
+                }
+                &.slick-active{
+                    button{
+                        background: rgba(255,255,255,0);
+                        border-color: #505656;
+                    }
+                }
+            }
+        }
     }
 }
