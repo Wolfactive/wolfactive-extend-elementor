@@ -8,7 +8,7 @@
     </div>
     <div class="<?php _e($class_preflix,'ella') ?>-slider-brand-mobile">
         <?php foreach (  $settings['list'] as $item ): ?>
-            <a href="<?php echo  $item['link_brand']['url']; ?>" class="<?php _e($class_preflix,'ella') ?>-image-brand col-divide-2 col-divide-md-4">
+            <a href="<?php echo  $item['link_brand']['url']; ?>" class="<?php _e($class_preflix,'ella') ?>-image-brand col-divide-5-col col-divide-sm-12">
                 <?php
                     echo '<img src="' . $item['list_image']['url'] . '">';
                 ?>
