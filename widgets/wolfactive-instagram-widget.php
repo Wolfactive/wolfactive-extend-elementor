@@ -117,8 +117,8 @@
                     'type' => \Elementor\Controls_Manager::SWITCHER,
                     'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
                     'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
-                    'return_value' => true,
-                    'default' => false,
+                    'return_value' => 'yes',
+                    'default' => 'no',
                 ]
             );
             $this->add_control(

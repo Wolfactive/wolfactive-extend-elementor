@@ -11,8 +11,8 @@
     </div>
     <div class="<?php _e($class_preflix,'ella') ?>-slider-noarrow-instagram" 
         data-show-item="<?php _e($settings['slider_item'],'ella') ?>"
-        data-auto="<?php _e($settings['toggle_autoplay'],'ella') ?>"
-        data-speed="<?php _e($settings['toggle_autoplay'] ? $settings['autoplay_speed'] : 3000 ,'ella')  ?>">>
+        data-auto="<?php _e($settings['toggle_autoplay'] == 'yes' ? true: false,'ella') ?>"
+        data-speed="<?php _e($settings['toggle_autoplay'] == 'yes' ? $settings['autoplay_speed'] : 3000 ,'ella')  ?>">
             <?php foreach (  $settings['gallery'] as $image ): ?>
             <a href="<?php echo  $image['url']; ?>" data-lightbox="roadtrip" class="<?php _e($class_preflix,'ella') ?>-image-instagram">
                 <?php
