@@ -93,7 +93,7 @@
                 display: inline-block;
                 margin: 0 0 10px 0!important;
             }
-            .have-line{
+            &.have-line{
                 &::before{
                     position: absolute;
                     content: "";
