@@ -146,6 +146,11 @@
             }
         }
         &-contain-item{
+            margin-bottom: 50px;
+            margin-top: 10px;
+            @include MediaQuery($xs){
+                margin-bottom: 40px;
+            }
             &.supermarket{
                 .product-item{
                     .product-item__overlay{
