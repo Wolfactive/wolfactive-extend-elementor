@@ -36,22 +36,24 @@ jQuery( document ).ready(function($) {
                     window.addEventListener("resize", () =>{
                       let widthResize = window.innerWidth;
                       let widthDevice = window.outerWidth;
-                      $sliderBrand.eq($index).not('.slick-initialized').slick({
-                        responsive: [
-                          {
-                            breakpoint: 480,
-                            settings: {
-                              slidesToShow: 2,
-                              slidesToScroll: 1,
-                              dots: false,
-                              infinite: false,
-                              speed: 300,
-                              nextArrow: $next,
-                              prevArrow: $prev,
+                      if( widthResize <= 576 || widthDevice <= 576){
+                        $sliderBrand.eq($index).not('.slick-initialized').slick({
+                          responsive: [
+                            {
+                              breakpoint: 480,
+                              settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                dots: false,
+                                infinite: false,
+                                speed: 300,
+                                nextArrow: $next,
+                                prevArrow: $prev,
+                              }
                             }
-                          }
-                        ]
-                      })
+                          ]
+                        })
+                      }
                     })
                   }
                   if(!sliderBrand.classList.contains('wa-ella-slider-brand-mobile')){
