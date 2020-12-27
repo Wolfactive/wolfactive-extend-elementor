@@ -8,6 +8,10 @@
             padding: 13px 60px 7px 0;
             border-bottom: 2px solid #e0e0e0;
             justify-content: flex-start;
+            @include MediaQuery($xs){
+                flex-direction: column;
+                border-bottom: none;
+            }
             &-title{
                 flex: 0 0 25%;
                 max-width: 25%;
@@ -20,6 +24,13 @@
                 font-weight: 700;
                 text-transform: uppercase;
                 position: relative;
+                @include MediaQuery($xs){
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    border-bottom: 2px solid #e0e0e0;
+                    padding: 12px 60px 12px 0;
+                    font-size: 18px;
+                }
             }
             &-tab{
                 flex: 0 0 75%;
@@ -31,6 +42,16 @@
                 flex-wrap: nowrap;
                 display: flex;
                 align-items: center;
+                @include MediaQuery($xs){
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    overflow-x: auto;
+                    padding: 14px 0 0;
+                }
                 &-item{
                     flex: 0 0 auto;
                     max-width: initial;
@@ -63,13 +84,15 @@
                             display: none;
                         }
                         &:after{
-                            position: absolute;
-                            content: "";
-                            bottom: -13px;
-                            left: 50%;
-                            border: 7px solid transparent;
-                            transform: translateX(calc(-50% + 1px));
-                            border-bottom-color: #e0e0e0;
+                            @media screen  and (min-width: 768px){
+                                position: absolute;
+                                content: "";
+                                bottom: -13px;
+                                left: 50%;
+                                border: 7px solid transparent;
+                                transform: translateX(calc(-50% + 1px));
+                                border-bottom-color: #e0e0e0;
+                            }
                         }
                     }
                 }
@@ -299,6 +322,14 @@
                             }
                         }
                     }
+                }
+            }
+            @include MediaQuery($xs){
+                &-product{
+                    order: 1;
+                }
+                &-image{
+                    order: 2;
                 }
             }
         }
