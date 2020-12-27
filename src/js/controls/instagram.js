@@ -12,10 +12,14 @@ jQuery( document ).ready(function($) {
             var $moreSliderInstagram =  $('.wa-ella-slider-instagram').toArray();
             $.map( $moreSliderInstagram, function( $item,$index ) {
               var $showItem = $item.getAttribute("data-show-item");
+              var $autoplay = $item.getAttribute("data-auto");
+              var $autoplaySpeed = $item.getAttribute("data-speed");
               if(!$sliderInstagram.eq($index).hasClass('.slick-initialized')){
                 $sliderInstagram.eq($index).not('.slick-initialized').slick({
-                    dots: false,
+                dots: false,
                 infinite: false,
+                autoplay: $autoplay,
+                $autoplaySpeed: $autoplaySpeed,
                 speed: 300,
                 slidesToShow: parseInt($showItem),
                 slidesToScroll: parseInt($showItem),

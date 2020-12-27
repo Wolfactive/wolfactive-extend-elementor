@@ -110,6 +110,37 @@
                     'default' => 'yes',
                 ]
             );
+            $this->add_control(
+                'toggle_autoplay',
+                [
+                    'label' => __( 'Autoplay', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => true,
+                    'default' => false,
+                ]
+            );
+            $this->add_control(
+                'autoplay_speed',
+                [
+                    'label' => __( 'Autoplay Speed', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::NUMBER,
+                    'min' => 3000,
+                    'max' => 10000,
+                    'step' => 5,
+                    'default' => 3000,
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'toggle_autoplay',
+                                'operator' => '==',
+                                'value' => true,
+                            ],
+                        ]
+                    ]
+                ]
+            );
             $this->end_controls_section();
         }
         protected function render() {
