@@ -162,6 +162,9 @@ header{
       }
       .navbar{
         background: transparent;
+        &.fixed{
+          background: #fff;
+        }
         border-bottom: none;
         .navbar__left .logo img{
           &:nth-child(1){
