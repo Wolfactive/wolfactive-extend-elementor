@@ -135,7 +135,7 @@
                             [
                                 'name' => 'toggle_autoplay',
                                 'operator' => '==',
-                                'value' => true,
+                                'value' => 'yes',
                             ],
                         ]
                     ]
