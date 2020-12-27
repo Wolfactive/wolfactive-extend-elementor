@@ -75,8 +75,8 @@
         }
     }
     @media screen  and( max-width: 438px){
-        .slick-initialized .slick-slide{
-            padding: 0px;
+        ..slick-slide{
+            padding: 0px !important;
         }
         .slick-arrow{
             display: none !important;
