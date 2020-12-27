@@ -162,9 +162,6 @@ header{
       }
       .navbar{
         background: transparent;
-        &.fixed{
-          background: #fff;
-        }
         border-bottom: none;
         .navbar__left .logo img{
           &:nth-child(1){
@@ -182,6 +179,30 @@ header{
           color: #fff !important;
           i{
             color: #fff !important;
+          }
+        }
+        &.fixed{
+          background: #fff;
+          .navbar__left .logo img{
+            &:nth-child(1){
+              display: block;
+            }
+            &:nth-child(2){
+              display: none;
+            }
+          }
+          .menu{
+            &>li{
+              &>a{
+                color: var(--primary-color) !important;
+              }
+            }
+          }
+          .navbar__right{
+            color: var(--primary-color) !important;
+            i{
+              color: var(--primary-color) !important;
+            }
           }
         }
       }
