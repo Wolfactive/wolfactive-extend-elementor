@@ -122,6 +122,20 @@ img{
           background-color: #fff!important;
           
         }
+        .header__container .header__center-container .container .header__center-right .row-divide .mc-live-search .search--form{
+          background-color: transparent;
+        }
+        .header__container .header__center-container .container .header__center-right .row-divide .mc-live-search .search--form .header__item-setting-item-button .btn{
+          background-color: transparent;
+          i{
+            color: #fff;
+          }
+        }
+        .header__container .header__center-container .container .header__center-right .row-divide .mc-live-search .search--form .header__item-setting-item-input input[aria-label=search-header-input]{
+          &::placeholder{
+            color: #fff;
+          }
+        }
       }
     }
   }
