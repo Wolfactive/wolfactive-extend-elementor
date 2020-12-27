@@ -80,6 +80,26 @@ class Wolfactive_Elementor_Product_tab extends \Elementor\Widget_Base {
             ]
         );
         $this->add_control(
+            'toggle_border',
+            [
+                'label' => __( 'Toggle Border Tab', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'conditions' => [
+                    'terms' => [
+                        [
+                            'name' => 'tab_style',
+                            'operator' => '==',
+                            'value' => 'style1'
+                        ],
+                    ]
+                ]
+            ]
+        );
+        $this->add_control(
             'slider_item_pc',
             [
                 'label' => __( 'Product Item on Desktop', 'wolfactive-extend-elementor' ),

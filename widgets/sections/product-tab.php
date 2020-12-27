@@ -16,7 +16,10 @@
             <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-tabs">
                 <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-tabs-list <?php if($settings['tab_style'] == 'style2'){echo 'special--style';} ?>">
                 <?php $count=0; foreach($settings['list'] as $item): ?>
-                    <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-tabs-item <?php if($count === 0){echo 'active';} ?>" data-product="<?php _e(implode(", ",$item['show_elements']),'ella')  ?>">
+                    <div class="<?php _e($class_preflix,'ella') ?>-product-tab-contain-tabs-item 
+                                <?php if($count === 0){echo 'active';} ?>
+                                <?php if($settings['toggle_border'] == 'yes') echo "have-border"?>" 
+                                data-product="<?php _e(implode(", ",$item['show_elements']),'ella')  ?>">
                         <?php 
                             _e($item['list_title'],'ella');
                         ?>
