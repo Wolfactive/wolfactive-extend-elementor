@@ -23,8 +23,9 @@ jQuery( document ).ready(function($) {
                             settings: {
                               slidesToShow: 2,
                               slidesToScroll: 1,
-                              dots: false,
+                              dots: true,
                               infinite: false,
+                              arrow:false,
                               speed: 300,
                               nextArrow: $next,
                               prevArrow: $prev,
@@ -44,7 +45,8 @@ jQuery( document ).ready(function($) {
                               settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1,
-                                dots: false,
+                                dots: true,
+                                arrow:false,
                                 infinite: false,
                                 speed: 300,
                                 nextArrow: $next,
