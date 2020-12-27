@@ -53,5 +53,20 @@
     .slick-initialized .slick-slide{
         padding: 0 19px;
     }
+    .wa-ella-slider-brand-mobile{
+        @media screen  and (min-width: 768px){
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .wa-ella-image-brand{
+                display: block;
+                margin-bottom: 20px;
+                text-align: center;
+                img{
+                    width: 90% !important;
+                }
+            }
+        }
+    }
     // margin: 0 -19px;
 }

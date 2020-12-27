@@ -48,6 +48,7 @@
                     'options' => [
                         'brand-slider'  => __( 'Brand Slider', 'wolfactive-extend-elementor' ),
                         'brand-have-td' => __( 'Brand Have Title Description', 'wolfactive-extend-elementor' ),
+                        'brand-two-row' => __( 'Brand Have Two Row', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
@@ -109,6 +110,9 @@
             }
             if($settings['brand_style'] === 'brand-have-td'){
                 include __DIR__ . '/sections/brand/brand-have-title-des.php';
+            }
+            if($settings['brand_style'] === 'brand-two-row'){
+                include __DIR__ . '/sections/brand/brand-two-row.php';
             }
         }
     }
