@@ -126,7 +126,7 @@ img{
           background-color: transparent;
         }
         .header__container .header__center-container .container .header__center-right .row-divide .mc-live-search .search--form .header__item-setting-item-button .btn{
-          background-color: transparent;
+          background-color: transparent !important;
           i{
             color: #fff;
           }
@@ -135,6 +135,9 @@ img{
           &::placeholder{
             color: #fff;
           }
+        }
+        .header__container .header__center-container .container .header__center-right .row-divide .mc-live-search .search--form .header__item-setting-item-input #searchHeaderInput{
+          background-color: transparent;
         }
       }
     }
