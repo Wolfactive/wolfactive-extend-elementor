@@ -3,6 +3,11 @@
     <h3 class="featured-title <?php if($settings['toggle_title_line'] == 'yes') echo 'have-line' ?>">
         <span><?php _e($settings['featured_title'],'ella') ?></span>
     </h3>
+    <?php if($settings['featured_description']): ?>
+    <div class="featured-desc">
+        <?php _e($settings['featured_description'],'ella') ?>
+    </div>
+    <?php endif; ?>
     <div class="feature-row">
         <?php foreach (  $settings['list'] as $item ): ?>
         <div class="one-box-featured">
