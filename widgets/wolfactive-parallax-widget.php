@@ -21,6 +21,57 @@
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 ]
             );
+
+            $this->add_control(
+                'toggle_float',
+                [
+                    'label' => __( 'Float Header Toggle', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'Show', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Hide', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'no',
+                ]
+            );
+
+            $this->add_control(
+                'logo_image',
+                [
+                    'label' => __( 'Choose White Logo', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::MEDIA,
+                    'default' => [  
+                        'url' => \Elementor\Utils::get_placeholder_image_src(),
+                    ],
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'toggle_float',
+                                'operator' => '==',
+                                'value' => 'yes'
+                            ],
+                        ]
+                    ]
+                ]
+            );
+            
+            $this->add_control(
+                'notification',
+                [
+                    'label' => __( 'Important Note', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::RAW_HTML,
+                    'raw' => __( '<p style="margin: 8px 0px;padding: 8px 0px;color: #333;font-size: 13px;font-weight: 600;border-top: 1px solid #333;border-bottom: 1px solid #333;">This style is worked if you choose header template 3 or header template 1</p>', 'wolfactive-extend-elementor' ),
+                    'content_classes' => '',
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'toggle_float',
+                                'operator' => '==',
+                                'value' => 'yes'
+                            ],
+                        ]
+                    ]
+                ]
+            );
             /* Section 1 */
             $this->add_control(
                 'image_bg_section_one',

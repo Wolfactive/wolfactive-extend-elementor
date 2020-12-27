@@ -150,3 +150,38 @@ img{
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
+header{
+  &.header--float{
+    &.header-template-01{
+      .head-content-page.head-promotion-3{
+        background-color: #ef6454 !important;
+        color: #ffffff !important;
+        a{
+          color: #ffffff !important;
+        }
+      }
+      .navbar{
+        background: transparent;
+        border-bottom: none;
+        .navbar__left .logo img{
+          &:nth-child(1){
+            display: none;
+          }
+        }
+        .menu{
+          &>li{
+            &>a{
+              color: #fff !important;
+            }
+          }
+        }
+        .navbar__right{
+          color: #fff !important;
+          i{
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

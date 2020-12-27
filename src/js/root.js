@@ -14,3 +14,4 @@ import "./controls/collection-countdown.js";
 import "./controls/xmas/xmas-carousel.js";
 import "./controls/xmas/xmas-customer.js";
 import "./controls/xmas/xmas-policy.js";
+import "./controls/parallaxControl.js";

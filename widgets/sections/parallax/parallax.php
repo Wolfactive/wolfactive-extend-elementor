@@ -1,4 +1,8 @@
-<div class="<?php _e($class_preflix,'ella') ?>-parallax-section-one">
+<div class="<?php _e($class_preflix,'ella') ?>-parallax-section-one
+            <?php if($settings['toggle_float'] == 'yes') echo "header--float"; ?>"
+            <?php if($settings['toggle_float'] == 'yes') echo 'data-header="header--float"'; ?>
+            <?php if($settings['toggle_float'] == 'yes'): ?> data-logo="<?php echo  $settings['logo_image']['url']  ?>" <?php endif; ?>
+            <?php if($settings['toggle_float'] == 'yes'): ?> data-icon="<?php echo  $settings['cart_image']['url']?>" <?php endif; ?>>
     <div class="custom-block-banner banner-large-img banner-parallax">
         <div class="img-box">
             <a href="<?php echo  $settings['link_section_one']['url']; ?>">

@@ -121,7 +121,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 			[
 				'label' => __( 'Important Note', 'wolfactive-extend-elementor' ),
 				'type' => \Elementor\Controls_Manager::RAW_HTML,
-				'raw' => __( '<p style="margin: 8px 0px;padding: 8px 0px;color: #333;font-size: 13px;font-weight: 600;border-top: 1px solid #333;border-bottom: 1px solid #333;">This style is worked if you choose header template 3</p>', 'wolfactive-extend-elementor' ),
+				'raw' => __( '<p style="margin: 8px 0px;padding: 8px 0px;color: #333;font-size: 13px;font-weight: 600;border-top: 1px solid #333;border-bottom: 1px solid #333;">This style is worked if you choose header template 3 or header template 1 </p>', 'wolfactive-extend-elementor' ),
 				'content_classes' => '',
 				'conditions' => [
 					'terms' => [
