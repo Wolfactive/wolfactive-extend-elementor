@@ -16,8 +16,11 @@
         </p>        
     </div>
     <div class="xmas-row-instagram">
-        <?php foreach (  $settings['xmas_gallery'] as $image ): ?>
-        <a href="<?php echo  $image['url']; ?>" data-lightbox="roadtrip" class="xmas-image-instagram">
+        <?php foreach (  $settings['xmas_gallery'] as $index=>$image ): ?>
+        <a href="<?php echo  $image['url']; ?>" 
+            data-lightbox="roadtrip"
+            data-show="4" 
+            class="xmas-image-instagram <?php if($index >= $settings['row_show'] * 4 ) echo 'd--none' ?>" >
             <?php
                 echo '<img src="' . $image['url'] . '">';
             ?>

@@ -704,6 +704,19 @@ class Wolfactive_Elementor_Xmas_Instagram extends \Elementor\Widget_Base{
                 'default' => [],
             ]
         );
+
+        $this->add_control(
+            'row_show',
+            [
+                'label' => __( 'Row Init Display', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 10,
+                'step' => 1,
+                'default' => 1,
+            ]
+        );
+
         $this->end_controls_section();
     }
     protected function render() {
