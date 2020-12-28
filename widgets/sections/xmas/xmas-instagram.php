@@ -1,5 +1,7 @@
 
-<div class="<?php _e($class_preflix,'ella') ?>-instagram-plush">
+<div class="<?php _e($class_preflix,'ella') ?>-instagram-plush" 
+    data-show ="4" 
+    data-index = "3">
     <div class="widget-title">   
         <h3 class="box-title">
             <span class="title"> 
@@ -18,8 +20,7 @@
     <div class="xmas-row-instagram">
         <?php foreach (  $settings['xmas_gallery'] as $index=>$image ): ?>
         <a href="<?php echo  $image['url']; ?>" 
-            data-lightbox="roadtrip"
-            data-show="4" 
+            data-lightbox ="roadtrip"
             class="xmas-image-instagram <?php if($index >= $settings['row_show'] * 4 ) echo 'd--none' ?>" >
             <?php
                 echo '<img src="' . $image['url'] . '">';
