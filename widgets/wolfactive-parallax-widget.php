@@ -21,7 +21,16 @@
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 ]
             );
-
+            $this->add_control(
+                'due_date_parallax',
+                [
+                    'label' => __( 'Date Countdown', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::DATE_TIME,
+                    'picker_options' => [
+                        'dateFormat' => 'F j, Y h:i:s',
+                    ],
+                ]
+            );
             $this->add_control(
                 'toggle_float',
                 [

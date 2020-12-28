@@ -429,6 +429,15 @@ class Wolfactive_Elementor_Xmas_Video extends \Elementor\Widget_Base {
 			]
         );
         $this->add_control(
+            'iframe_video',
+            [
+                'label' => __( 'Iframe Video', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'This is iframe video' , 'wolfactive-extend-elementor' ),
+                'label_block' => true,
+            ]
+        );
+        $this->add_control(
             'image_background_video',
             [
                 'label' => __( 'Choose Image Background', 'wolfactive-extend-elementor' ),

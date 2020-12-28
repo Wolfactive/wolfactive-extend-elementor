@@ -108,18 +108,18 @@
                 <?php echo $settings['desc_section_four']; ?>
             </span>
             </p>
-            <div class="sub-banner-countdown" data-countdown="">
+            <div class="sub-banner-countdown parallax-countdown" data-countdown-parallax="<?php echo $settings['due_date_parallax']; ?>">
                 <div class="clock-item">
-                    <span class="num">00</span><span class="text-countdown">days</span>
+                    <span class="num" id="numberDaysParallax">00</span><span class="text-countdown">days</span>
                 </div>
                 <div class="clock-item">
-                    <span class="num">00</span><span class="text-countdown">hours</span>
+                    <span class="num" id="numberHoursParallax">00</span><span class="text-countdown">hours</span>
                 </div>
                 <div class="clock-item">
-                    <span class="num">00</span><span class="text-countdown">mins</span>
+                    <span class="num" id="numberMinsParallax">00</span><span class="text-countdown">mins</span>
                 </div>
                 <div class="clock-item">
-                    <span class="num">00</span><span class="text-countdown">secs</span>
+                    <span class="num" id="numberSecsParallax">00</span><span class="text-countdown">secs</span>
                 </div>
             </div>
             <a href="<?php echo  $settings['link_section_four']['url']; ?>" class="banner-button">
