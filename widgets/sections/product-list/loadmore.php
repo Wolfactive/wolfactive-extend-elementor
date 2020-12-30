@@ -1,4 +1,6 @@
-<div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--loadmore">
+<div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--loadmore" 
+    data-plus="<?php echo $settings['slider_item_pc'] ?>"
+    data-item="<?php echo (int)$settings['slider_item_pc'] * (int)$settings['row_item_pc'] ?>">
     <h3 class="<?php _e($class_preflix,'ella') ?>-product-list-title <?php if($settings['toggle_title_line'] == 'yes') echo "have-line" ?> ">  
         <span>
             <?php _e($settings['title'],'ella') ?>
@@ -35,7 +37,8 @@
     </div>
     <?php if(count($settings['show_elements']) > (int)$settings['slider_item_pc']* (int)$settings['row_item_pc']): ?>
     <div class="<?php _e($class_preflix,'ella') ?>-product-list-control">
-        <button class="<?php _e($class_preflix,'ella') ?>-product-list-control-button" aria-label="load-more-button-product-list">
+        <button class="<?php _e($class_preflix,'ella') ?>-product-list-control-button" 
+                aria-label="load-more-button-product-list" >
             <?php _e($settings['button_title'],'ella') ?>
         </button>
     </div>

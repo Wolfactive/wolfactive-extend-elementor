@@ -17,5 +17,6 @@ import "./controls/xmas/xmas-policy.js";
 import "./controls/parallaxControl.js";
 import "./controls/xmas/xmas-mc-customizer.js";
 import buttonInstagramLoadMore from "./components/buttonInstagramLoadMore.js";
-
+import loadMoreButton from './components/loadMoreButton.js';
 buttonInstagramLoadMore();
+loadMoreButton();
