@@ -248,7 +248,9 @@
     &-product-list.supermarket{
         h3{
             text-align: left;
-            background-color: #F8F8F8;
+            span{
+                background-color: #F8F8F8;
+            }
         }
         .wa-ella-product-list-control{
             margin-top: 35px;
