@@ -16,7 +16,7 @@
                 </span>
             </p>
             <a href="<?php echo $settings['link_block']['url']; ?>" class="block-banner-button">
-                shop the looks
+                <?php echo $settings['name_button']; ?>
             </a>
         </div>
     </div>
