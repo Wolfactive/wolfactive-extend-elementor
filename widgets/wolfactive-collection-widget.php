@@ -37,6 +37,7 @@
                         'collection-button-shop-now' => __( 'Collection Button Shop Now', 'wolfactive-extend-elementor' ),
                         'collection-boutique' => __( 'CO BOUTIQUE', 'wolfactive-extend-elementor' ),
                         'collection-slider-dot' => __( 'Collection Slider Dot', 'wolfactive-extend-elementor' ),
+                        'collection-two-box' => __( 'Collection Two Box', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
@@ -207,6 +208,9 @@
             }
             if($settings['collection_style'] === 'collection-slider-dot'){
                 include __DIR__ . '/sections/collection/collection-slider-dot.php';
+            }
+            if($settings['collection_style'] === 'collection-two-box'){
+                include __DIR__ . '/sections/collection/collection-two-box.php';
             }
         }
     }

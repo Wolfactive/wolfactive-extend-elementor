@@ -152,6 +152,9 @@
 }
 
 .wa-ella-collection-countdown {
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
   .collection-row {
     display: flex;
     justify-content: flex-start;
@@ -163,6 +166,9 @@
     @include MediaQuery($sm) {
       margin: 0 -10px;
     }
+  }
+  .des {
+    font-weight: 400;
   }
   .col-collection {
     flex: 0 0 33.33%;
@@ -265,6 +271,7 @@
             display: block;
           }
           .text-clock {
+            font-weight: 400;
             font-size: 12px;
           }
         }
@@ -368,57 +375,55 @@
       }
     }
   }
-  .between-custom{
-      position: relative;
-      .slick-dots{
+  .between-custom {
+    position: relative;
+    .slick-dots {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      letter-spacing: -0.33em;
+      line-height: 0;
+      position: absolute;
+      left: 50%;
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      bottom: 60px;
+    }
+    .slick-dots li.slick-active {
+      border-color: #fff;
+      button {
+        background: rgba(255, 255, 255, 0);
+        border-color: #fff;
+      }
+    }
+    .slick-dots li {
+      display: inline-block;
+      font-size: 0px;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      letter-spacing: normal;
+      button {
+        width: 10px;
+        height: 10px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background: #fff;
         padding: 0;
-        margin: 0;
-        text-align: center;
-        letter-spacing: -.33em;
-        line-height: 0;
-        position: absolute;
-        left: 50%;
-        -moz-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        bottom: 60px;
+        outline: none;
+        cursor: pointer;
       }
-      .slick-dots li.slick-active{
-          border-color: #fff;
-          button{
-              background: rgba(255,255,255,0);
-              border-color: #fff;
-          }
-      }
-      .slick-dots li{
-          display: inline-block;
-          font-size: 0px;
-          width: 10px;
-          height: 10px;
-          margin: 0 5px;
-          letter-spacing: normal;
-          button{
-              width: 10px;
-              height: 10px;
-              -moz-border-radius: 50%;
-              -webkit-border-radius: 50%;
-              -ms-border-radius: 50%;
-              -o-border-radius: 50%;
-              border-radius: 50%;
-              border: 1px solid #fff;
-              background: #fff;
-              padding: 0;
-              outline: none;
-              cursor: pointer;
-          }
-          
-      }
-      .slick-dots li button:before{
-          display: none;
-      }
-
+    }
+    .slick-dots li button:before {
+      display: none;
+    }
   }
 }
 

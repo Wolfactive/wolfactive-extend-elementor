@@ -46,6 +46,17 @@
                 ]
             );
             $this->add_control(
+                'bg_toggle_feture',
+                [
+                    'label' => __( 'Background', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'label_on' => __( 'On', 'wolfactive-extend-elementor' ),
+                    'label_off' => __( 'Off', 'wolfactive-extend-elementor' ),
+                    'return_value' => 'yes',
+                    'default' => 'no',
+                ]
+            );
+            $this->add_control(
                 'toggle_title_line',
                 [
                     'label' => __( 'Toggle Title Line', 'wolfactive-extend-elementor' ),
