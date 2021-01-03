@@ -350,6 +350,10 @@
                                         }
                                     }
                                 }
+                                &>.product-item__color{
+                                    order: 5;
+                                    justify-content: flex-start;
+                                }
                             }
                         }
                     }
