@@ -334,7 +334,7 @@
                                     letter-spacing: normal;
                                     order: 3;
                                 }
-                                .product-item__star{
+                                &>.product-item__star{
                                     display: block!important;
                                     text-align: left!important;
                                     margin-bottom: 18px;
