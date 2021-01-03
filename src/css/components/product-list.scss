@@ -174,12 +174,18 @@
                 margin-bottom: 40px;
             }
             &.supermarket{
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 5px;
+                    padding: 0 7.5px;
+                }
                 .product-item{
-                    margin-bottom: 0px;
-                    background: #fff;
-                    border-bottom: 1px solid #eaeaea;
-                    padding: 0 15px 25px;
-                    height: 100%;
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 0px;
+                        background: #fff;
+                        border-bottom: 1px solid #eaeaea;
+                        padding: 0 15px 25px;
+                        height: 100%;
+                    }
                     .product-item__overlay{
                         .product-item__star{
                             display: none;
