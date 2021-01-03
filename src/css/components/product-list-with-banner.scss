@@ -5,7 +5,7 @@
         }
         border-top: 1px solid #efefef;
         .slick-dots{
-            display: none;
+            display: none!important;
             li{
                 button{
                     &::before{
@@ -15,7 +15,7 @@
             }
             
             @include MediaQuery($lg){
-                display: block;
+                display: block!important;
                 li{
                     button{
                         width: 10px;
