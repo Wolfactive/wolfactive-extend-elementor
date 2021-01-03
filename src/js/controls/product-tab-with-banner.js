@@ -1,7 +1,7 @@
 jQuery( document ).ready(function($) {
     let elementorEditorCheck = document.querySelector('body.elementor-editor-active');
     var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="gg-chevron-left"></i></button>';
-      var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="gg-chevron-right"></i></button>';
+    var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="gg-chevron-right"></i></button>';
     
     function tabQueryAjax (tab){
         let tabListGET = tab.target.parentElement;
@@ -121,8 +121,8 @@ jQuery( document ).ready(function($) {
 
     function sliderProductInit(){
         let slider = document.querySelector('.wa-ella-product-tab-with-banner .wa-ella-product-tab-with-banner-container-product-contain-products');
-        var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></button>';
-        var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></button>';
+        var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="gg-chevron-left"></i></button>';
+    var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="gg-chevron-right"></i></button>';
         if(slider){
             var $slider =   $('.wa-ella-product-tab-with-banner .wa-ella-product-tab-with-banner-container-product-contain-products');
             var $sliders =  $('.wa-ella-product-tab-with-banner .wa-ella-product-tab-with-banner-container-product-contain-products').toArray();
