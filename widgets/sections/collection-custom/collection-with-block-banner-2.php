@@ -28,7 +28,7 @@
                 <div class="title-one-collection">
                     <h3 class="title-collection">
                         <?php
-                            echo  $item['collection_title_one_box'];
+                            echo  $settings['collection_title_one_box'];
                         ?>
                     </h3>
                 </div>
