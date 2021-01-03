@@ -1,7 +1,7 @@
 jQuery( document ).ready(function($) {
     let elementorEditorCheck = document.querySelector('body.elementor-editor-active');
-    let $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></button>';
-    let $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></button>';
+    var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="gg-chevron-left"></i></button>';
+    var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="gg-chevron-right"></i></button>';
 
     function tabQueryAjax (tab){
         let tabListGET = tab.target.parentElement;
