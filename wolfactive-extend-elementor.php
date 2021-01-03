@@ -292,7 +292,7 @@ final class Wolfactive_Extend_Elementor {
         $plugin_url = plugin_dir_url( __FILE__ );
         wp_enqueue_style( 'wolfactive-ella-elementor-addon-css', $plugin_url . 'dist/css/main.css' );
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-lib-js', $plugin_url . 'lib/slick.min.js', array ( 'jquery' ), 1.1, true);
-       // wp_enqueue_script( 'wolfactive-ella-elementor-addon-js', $plugin_url . 'dist/js/root.js', array ( 'jquery' ), 1.1, true);
+        wp_enqueue_script( 'wolfactive-ella-elementor-addon-js', $plugin_url . 'dist/js/root.js', array ( 'jquery' ), 1.1, true);
     }
     public function init_script_excute($tag, $handle, $src) {
         if(!is_admin()):
