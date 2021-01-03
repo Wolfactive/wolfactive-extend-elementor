@@ -26,6 +26,7 @@
                         echo '<img src="' . $settings['image']['url'] . '">';
                     ?>
                 <div class="title-one-collection">
+
                     <h3 class="title-collection">
                         <?php
                             echo  $settings['collection_title_one_box'];
