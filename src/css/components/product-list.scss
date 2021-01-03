@@ -175,6 +175,11 @@
             }
             &.supermarket{
                 .product-item{
+                    margin-bottom: 0px;
+                    background: #fff;
+                    border-bottom: 1px solid #eaeaea;
+                    padding: 0 15px 25px;
+                    height: 100%;
                     .product-item__overlay{
                         .product-item__star{
                             display: none;
