@@ -9,7 +9,6 @@ Author URI: https://wolfactive.dev/
 License: GPLv2 and later
 Text Domain: wolfactive-extend-elementor
 Domain Path: /languages/
-
 Copyright YEAR PLUGIN_AUTHOR_NAME (email : your email address)
 (Plugin Name) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -294,7 +293,7 @@ final class Wolfactive_Extend_Elementor {
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-lib-js', $plugin_url . 'lib/slick.min.js', array ( 'jquery' ), 1.1, true);
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-js', $plugin_url . 'dist/js/root.js', array ( 'jquery' ), 1.1, true);
     }
-    public function init_script_excute($tag, $handle, $src) {
+    public function init_script_excute() {
         if(!is_admin()):
             _e('<script defer type="text/javascript" src="'.plugins_url( 'dist/js/root.js', __FILE__ ).'"></script>', 'ella');
         endif;
