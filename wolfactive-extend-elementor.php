@@ -145,7 +145,7 @@ final class Wolfactive_Extend_Elementor {
         add_action( 'elementor/elements/categories_registered', [ $this, 'WolfactiveElementor__widget_categories' ] );
 
         add_action( 'wp_enqueue_scripts', [ $this, 'init_style_script' ]);
-        add_action( 'wp_head', [ $this, 'init_script_excute' ]);
+        add_action( 'script_loader_tag', [ $this, 'init_script_excute'],10, 3 );
     }
 
     /**
@@ -294,10 +294,14 @@ final class Wolfactive_Extend_Elementor {
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-lib-js', $plugin_url . 'lib/slick.min.js', array ( 'jquery' ), 1.1, true);
         wp_enqueue_script( 'wolfactive-ella-elementor-addon-js', $plugin_url . 'dist/js/root.js', array ( 'jquery' ), 1.1, true);
     }
-    public function init_script_excute() {
-        if(!is_admin()):
-            _e('<script defer type="text/javascript" src="'.plugins_url( 'dist/js/root.js', __FILE__ ).'"></script>', 'ella');
-        endif;
+    public function init_script_excute($tag, $handle, $src) {
+        $defer = array( 
+            'wolfactive-ella-elementor-addon-js',
+        );
+        if ( in_array( $handle, $defer ) ) {
+            return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
+        }
+        return $tag;
     }
 }
 
