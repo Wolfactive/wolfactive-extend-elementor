@@ -55,13 +55,14 @@
             @include MediaQuery($lg){
                 opacity: 0;
             }
-            i{
-                font-size: 20px;
-                font-weight: 600;
-            }
             &:hover{
                 background-color: var(--primary-bg-color);
-                color: #fff;
+                
+                i{
+                    &:after{
+                        color: #fff;
+                    }
+                }
             }
         }
         .slick-prev{
@@ -69,11 +70,27 @@
             @include MediaQuery($md){
                 left: -6px;
             }
+            i{
+                &:after{
+                    width: 9px !important;
+                    height: 9px !important;
+                    left: 10px !important;
+                    top: 3px !important;
+                }
+            }
         }
         .slick-next{
             right: 0px;
             @include MediaQuery($md){
                 right: -6px;
+            }
+            i{
+                &:after{
+                    width: 9px !important;
+                    height: 9px !important;
+                    right: 8px !important;
+                    top: 3px !important;
+                }
             }
         }
         &-container-image{

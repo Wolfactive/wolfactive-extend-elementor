@@ -2,8 +2,8 @@ jQuery( document ).ready(function($) {
   let elementorEditorCheck = document.querySelector('body.elementor-editor-active');
     function sliderInit () {
       let slider = document.querySelector('.wa-ella-product-list.product-list--slider .wa-ella-product-list-contain');
-      var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></button>';
-      var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></button>';
+      var $prev = '<button type="button" class="slick-prev slick-arrow" style="display: block;"><i class="gg-chevron-left"></i></button>';
+      var $next = '<button type="button" class="slick-next slick-arrow" style="display: block;"><i class="gg-chevron-right"></i></button>';
       if(slider){
         var $slider =   $('.wa-ella-product-list.product-list--slider .wa-ella-product-list-contain');
         var $sliders =  $('.wa-ella-product-list.product-list--slider .wa-ella-product-list-contain').toArray();
