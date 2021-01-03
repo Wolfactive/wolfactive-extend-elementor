@@ -1,4 +1,5 @@
-<div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--loadmore" 
+<div class="<?php _e($class_preflix,'ella') ?>-product-list product-list--loadmore
+            <?php if($settings['toggle_product_item_style'] == 'yes') echo 'supermarket'?>" 
     data-plus="<?php echo $settings['slider_item_pc'] ?>"
     data-item="<?php echo (int)$settings['slider_item_pc'] * (int)$settings['row_item_pc'] ?>">
     <h3 class="<?php _e($class_preflix,'ella') ?>-product-list-title <?php if($settings['toggle_title_line'] == 'yes') echo "have-line" ?> ">  
