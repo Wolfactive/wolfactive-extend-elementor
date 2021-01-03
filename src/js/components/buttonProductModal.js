@@ -14,9 +14,9 @@ if(carouselDOM){
             let buttons = itemBtn.querySelectorAll('.wa-ella-carousel-item-image-button'),modalDOM;
             if(buttons.length !== 0){
                 buttons.forEach(item =>{
-                    modalDOM = item.querySelector('.wa-ella-product-modal-info');
-                    modalDOM && (modalDOM.remove());
                     item.children[0].onclick = () =>{
+                        modalDOM = document.querySelector('.wa-ella-product-modal-info');
+                        modalDOM && (modalDOM.remove());
                         asyncCallProductInfo(item);
                     };
                 })

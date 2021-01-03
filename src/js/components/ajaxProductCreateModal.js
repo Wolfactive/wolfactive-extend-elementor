@@ -36,6 +36,12 @@ const ajaxProductCreateModal = (data,location) =>{
     .join('');
     let locate = location.getAttribute('data-location'),
         postion = location.getAttribute('data-position'),
+        rect = location.getBoundingClientRect(),
+        loca = {
+            top: rect.top + document.body.scrollTop,
+            left: rect.left + document.body.scrollLeft
+        },
+        body = document.querySelector('body'),
         closeButton,modalDOM;
     // create modal information
     const modal = `
@@ -48,12 +54,17 @@ const ajaxProductCreateModal = (data,location) =>{
             </div>
         </div>
     `;
-    location.insertAdjacentHTML('beforeend',modal);
-    modalDOM = location.querySelector('.wa-ella-product-modal-info');
-    locate == 'left' && (modalDOM.style.right = `${postion}%`);
+    body.insertAdjacentHTML('beforeend',modal);
+    modalDOM = body.querySelector('.wa-ella-product-modal-info');
+    if(locate == 'left'){
+        modalDOM.style.top = `${loca.top - 100}px`;
+        modalDOM.style.left = `${loca.left}px`;
+        modalDOM.style.transform = `translateX(-100%)`;
+    };
     if(locate == 'right'){
-        modalDOM.style.left = `0`;
-        modalDOM.style.transform = `translateX(28px)`;
+        modalDOM.style.top = `${loca.top - 100}px`;
+        modalDOM.style.left = `${loca.left}px`;
+        modalDOM.style.transform = `translateX(24px)`;
     }
     closeButton = modalDOM.querySelector('.close-modal-product .btn');
     closeButton && (closeButton.onclick = () =>{ modalDOM.remove()})
