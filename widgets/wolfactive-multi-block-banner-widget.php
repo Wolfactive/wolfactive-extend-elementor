@@ -32,10 +32,46 @@
                         'multi-block-banner-no-space'  => __( 'Multi Block Banner No Space', 'wolfactive-extend-elementor' ),
                         'multi-block-banner-have-content'  => __( 'Multi Block Banner Have Content', 'wolfactive-extend-elementor' ),
                         'block-banner-three-box'  => __( 'Block Banner Three Box', 'wolfactive-extend-elementor' ),
+                        'block-banner-no-text'  => __( 'Multi Block Banner No Text', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
-            
+            $this->add_control(
+                'title', [
+                    'label' => __( 'Title', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'Shop The Looks' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'block_banner_style',
+                                'operator' => '==',
+                                'value' => 'block-banner-no-text'
+                            ],
+                        ]
+                    ]
+                ]
+            );
+            $this->add_control(
+                'description',
+                [
+                    'label' => __( 'Description', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                    'rows' => 10,
+                    'default' => __( 'Quisquemos sodales suscipit tortor ditaemcos', 'wolfactive-extend-elementor' ),
+                    'placeholder' => __( 'Type your description here', 'wolfactive-extend-elementor' ),
+                    'conditions' => [
+                        'terms' => [
+                            [
+                                'name' => 'block_banner_style',
+                                'operator' => '==',
+                                'value' => 'block-banner-no-text'
+                            ],
+                        ]
+                    ]
+                ]
+            );
             $repeater = new \Elementor\Repeater();
             $repeater->add_control(
                 'list_image',
@@ -184,6 +220,15 @@
 					[],
                 ],
                 'title_field' => 'Product Modal',
+                'conditions' => [
+					'terms' => [
+						[
+							'name' => 'block_banner_style',
+							'operator' => '==',
+							'value' => 'block-banner-no-text'
+						],
+					]
+				]
 			]
         );
 
@@ -203,6 +248,9 @@
             }
             if($settings['block_banner_style'] === 'block-banner-three-box'){
                 include __DIR__ . '/sections/multi-block-banner/block-banner-three-box.php';
+            }
+            if($settings['block_banner_style'] === 'block-banner-no-text'){
+                include __DIR__ . '/sections/multi-block-banner/multi-banner-no-text.php';
             }
         }
     }

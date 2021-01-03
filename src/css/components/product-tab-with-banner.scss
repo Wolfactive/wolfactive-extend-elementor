@@ -1,5 +1,10 @@
 .wa-ella{
     &-product-tab-with-banner{
+        .slick-dotted.slick-slider{
+            @media screen and (min-width: 1280px){
+                margin-bottom: 0px!important;
+            }
+        }
         &-top{
             margin-bottom: 25px;
             padding-right: 0;

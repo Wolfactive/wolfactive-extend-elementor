@@ -3,6 +3,11 @@
         .product-item{
             margin-bottom: 0px;
         }
+        .slick-dotted.slick-slider{
+            @media screen and (min-width: 1280px){
+                margin-bottom: 0px!important;
+            }
+        }
         .slick-dots{
             display: none!important;
             li{

@@ -4,6 +4,11 @@
             margin-bottom: 0px;
         }
         border-top: 1px solid #efefef;
+        .slick-dotted.slick-slider{
+            @media screen and (min-width: 1280px){
+                margin-bottom: 0px!important;
+            }
+        }
         .slick-dots{
             display: none!important;
             li{
