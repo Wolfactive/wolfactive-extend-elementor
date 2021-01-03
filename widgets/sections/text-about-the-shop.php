@@ -4,16 +4,16 @@
             <div class="col-12 col-lg-10 offset-lg-1">
                 <h4 class="title">
                     <span>
-                        About The Shop
+                        <?php
+                                    echo  $settings['text_abt_title'];
+                                ?>
                     </span>
                 </h4>
                 <p class="des">
                     <span>
-                        Pellentesque scelerisque eget lectus vitae congue. Phasellus ut laoreet purus. Proin accumsan
-                        commodo venenatis. Nunc nec vestibulum nisl, sit amet tristique libero. Nulla cursus hendrerit
-                        facilisis. Duis mattis sit amet neque et condimentum aliquam erat volutpat. Nam scelerisque
-                        ipsum accumsan lorem placerat dignissim. Mauris consectetur milancelos an cosmopolis dabpoe
-                        ligula sed mauris condimentum de loremous.
+                        <?php
+                                    echo  $settings['text_abt_description'];
+                                ?>
                     </span>
                 </p>
             </div>
