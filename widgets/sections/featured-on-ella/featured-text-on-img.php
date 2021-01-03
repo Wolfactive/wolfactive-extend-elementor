@@ -1,10 +1,11 @@
-
-<div class="<?php _e($class_preflix,'ella') ?>-featured-text-on-image">
-    <div class="container">
+<div
+    class="<?php _e($class_preflix,'ella') ?>-featured-text-on-image <?php if($settings['bg_toggle_feture'] == 'yes') echo "have--background-feature"?>">
+    <div class=" container">
         <div class="feature-row">
             <?php foreach (  $settings['list'] as $item ): ?>
             <div class="one-box-featured">
-                <a href="<?php echo  $item['link_featured']['url']; ?>" class="<?php _e($class_preflix,'ella') ?>-image-featured">
+                <a href="<?php echo  $item['link_featured']['url']; ?>"
+                    class="<?php _e($class_preflix,'ella') ?>-image-featured">
                     <?php
                         echo '<img src="' . $item['list_image']['url'] . '">';
                     ?>
@@ -20,7 +21,8 @@
                         </div>
                     </div>
                 </a>
-                <a class="featured-btn-shop" href="<?php echo  $item['link_featured']['url']; ?>"><?php echo  $item['text_button']; ?></a>
+                <a class="featured-btn-shop"
+                    href="<?php echo  $item['link_featured']['url']; ?>"><?php echo  $item['text_button']; ?></a>
             </div>
             <?php endforeach; ?>
         </div>
