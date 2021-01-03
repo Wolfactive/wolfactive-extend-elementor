@@ -299,7 +299,7 @@ final class Wolfactive_Extend_Elementor {
             'wolfactive-ella-elementor-addon-js',
         );
         if ( in_array( $handle, $defer ) ) {
-            return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
+            return '<script defer src="' . $src . '"  type="text/javascript"></script>' . "\n";
         }
         return $tag;
     }
