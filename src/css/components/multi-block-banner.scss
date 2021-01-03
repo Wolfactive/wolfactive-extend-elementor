@@ -1,4 +1,39 @@
 .wa-ella-multi-block-banner-default {
+  .banner__title{
+      color: #232323;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 15px;
+      text-align: center;
+        &:before {
+          position: absolute;
+          content: "";
+          height: 1px;
+          background-color: #e0e0e0;
+          top: -moz-calc(50% - 0.5px);
+          top: -webkit-calc(50% - 0.5px);
+          top: -ms-calc(50% - 0.5px);
+          top: calc(50% - 0.5px);
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+      span {
+        padding: 0 24px;
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
+      }
+  }
+  .banner__desc{
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 22px;
+    letter-spacing: normal;
+  }
   .block-banner-row {
     display: flex;
     justify-content: flex-start;
@@ -87,6 +122,7 @@
     position: relative;
     display: block;
     overflow: hidden;
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
@@ -116,6 +152,24 @@
       &::before {
         overflow: visible;
         opacity: 0.3;
+      }
+    }
+    &.no--hover{
+      &::before {
+        display: none;
+      }
+      &:hover {
+        img {
+          -moz-transform: unset;
+          -o-transform: unset;
+          -ms-transform: unset;
+          -webkit-transform: unset;
+          transform: unset;
+        }
+        &::before {
+          overflow: unset;
+          opacity: unset;
+        }
       }
     }
     img {
