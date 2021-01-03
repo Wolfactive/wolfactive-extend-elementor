@@ -116,6 +116,14 @@
                 ]
             );
             $repeaterBetween->add_control(
+                'collection_text_sale', [
+                    'label' => __( 'Description Sale', 'wolfactive-extend-elementor' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => __( 'Sale up to 60% off on selected items. End ins:' , 'wolfactive-extend-elementor' ),
+                    'label_block' => true,
+                ]
+            );
+            $repeaterBetween->add_control(
                 'link_colection',
                 [
                     'label' => __( 'Link Collection', 'wolfactive-extend-elementor' ),
