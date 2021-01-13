@@ -32,6 +32,7 @@
                         'slider-arrow'  => __( 'Slider Arrow', 'wolfactive-extend-elementor' ),
                         'slider-no-arrow' => __( 'Slide No Arrow', 'wolfactive-extend-elementor' ),
                         'slider-two-row' => __( 'Slide Two Row', 'wolfactive-extend-elementor' ),
+                        'slider-fullwidth' => __( 'Slide Full Width', 'wolfactive-extend-elementor' ),
                     ],
                 ]
             );
@@ -154,6 +155,9 @@
             }
             if($settings['instagram_style'] === 'slider-two-row'){
                 include __DIR__ . '/sections/instagram/instagram-two-row.php';
+            }
+            if($settings['instagram_style'] === 'slider-fullwidth'){
+                include __DIR__ . '/sections/instagram/instagram-fullwidth.php';
             }
         }
     }
