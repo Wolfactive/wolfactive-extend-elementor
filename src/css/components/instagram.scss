@@ -135,6 +135,14 @@
         }
     }
 }
+.instagram-two-row{
+    .wa-ella-instagram{
+        padding: 15px 0 70px;
+        &.wa-ella-title-instagram .mc-dp-flex{
+            background: #fafafa;
+        }
+    }
+}
 .wa-ella-instagram.inst-fw{
     padding: 57px 0 4px;
 }
@@ -211,12 +219,14 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin: 0 -3px;
     a.wa-ella-image-instagram{
         flex: 0 0 20%;
         max-width: 20%;
         width: 100%;
         transition: 0.5s all;
             cursor: pointer;
+            padding:0 3px;
         &:hover{
             opacity: 0.5;
             transition: 0.5s all;
