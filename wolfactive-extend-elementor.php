@@ -257,6 +257,7 @@ final class Wolfactive_Extend_Elementor {
         require_once( __DIR__ . '/widgets/wolfactive-xmas-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-parallax-widget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-text-about-the-shop.php' );
+        require_once( __DIR__ . '/widgets/wolfactive-lookbook-default-wiget.php' );
         // Register posts widget
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );       
@@ -284,6 +285,7 @@ final class Wolfactive_Extend_Elementor {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Xmas_Newsletter() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Parallax() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_About_The_Shop() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_LookBook_Default() );
     }
 
     public function init_style_script() {
