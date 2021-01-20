@@ -49,6 +49,7 @@
                                 get_template_part('sections/product-item-flash-deals');
                         endwhile;
                         wp_reset_postdata();
+                        error_reporting(0);
                     endif;
                 ?>
         </div>

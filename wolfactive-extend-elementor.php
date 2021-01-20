@@ -259,6 +259,7 @@ final class Wolfactive_Extend_Elementor {
         require_once( __DIR__ . '/widgets/wolfactive-text-about-the-shop.php' );
         require_once( __DIR__ . '/widgets/wolfactive-lookbook-default-wiget.php' );
         require_once( __DIR__ . '/widgets/wolfactive-flash-deals.php' );
+        require_once( __DIR__ . '/widgets/wolfactive-lookbook-custom-wiget.php' );
         // Register posts widget
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Carousel() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Product_list() );       
@@ -288,6 +289,7 @@ final class Wolfactive_Extend_Elementor {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_About_The_Shop() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_LookBook_Default() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_Flash_Deals() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Wolfactive_Elementor_LookBook_Custom() );
     }
 
     public function init_style_script() {
