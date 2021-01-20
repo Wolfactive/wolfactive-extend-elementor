@@ -37,7 +37,16 @@ class Wolfactive_Elementor_Flash_Deals extends \Elementor\Widget_Base {
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
         );
-
+        $this->add_control(
+            'due_date_flash_deals',
+            [
+                'label' => __( 'Date Countdown', 'wolfactive-extend-elementor' ),
+                'type' => \Elementor\Controls_Manager::DATE_TIME,
+                'picker_options' => [
+                    'dateFormat' => 'F j, Y h:i:s',
+                ],
+            ]
+        );
         $this->add_control(
 			'fd_title', [
 				'label' => __( 'Title', 'wolfactive-extend-elementor' ),
