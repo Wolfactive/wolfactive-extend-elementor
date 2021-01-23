@@ -10,7 +10,7 @@
             padding-right: 0;
             display: flex;
             align-items: flex-start;
-            padding: 13px 60px 7px 0;
+            padding: 13px 0px 7px 0;
             border-bottom: 2px solid #e0e0e0;
             justify-content: flex-start;
             @include MediaQuery($xs){
@@ -71,6 +71,9 @@
                     position: relative;
                     border: none;
                     padding: 4px 15px 2px 16px;
+                    &:nth-last-child(1){
+                        padding-right: 0px ;
+                    }
                     text-align: left;
                     letter-spacing: .05em;
                     text-transform: uppercase;
@@ -91,9 +94,6 @@
                     &.active{
                         font-weight: 600;
                         color: #232323;
-                        &::before{
-                            display: none;
-                        }
                         &:after{
                             @media screen  and (min-width: 768px){
                                 position: absolute;
