@@ -3,9 +3,13 @@
             <?php if($settings['spacing_toggle'] != 'yes') echo "no-spacing-bottom"?>
             <?php if($settings['slider_style'] == 'absoblute') echo "header--float"; ?>"
     <?php if($settings['slider_style'] == 'absoblute') echo 'data-header="header--float"'; ?>
+    <?php if($settings['slider_style'] == 'boxed') echo 'data-header="header--boxed"'; ?>
     <?php if($settings['slider_style'] == 'absoblute'): ?> data-logo="<?php echo  $settings['logo_image']['url']  ?>"
     <?php endif; ?> <?php if($settings['slider_style'] == 'absoblute'): ?>
-    data-icon="<?php echo  $settings['cart_image']['url']?>" <?php endif; ?>>
+    data-icon="<?php echo  $settings['cart_image']['url']?>" <?php endif; ?>
+    <?php if($settings['slider_style'] == 'boxed'): ?> 
+    data-outter="<?php echo $settings['background_color'].'px' ?>"
+    data-boexed="<?php echo $settings['boxed__container']['size'].$settings['width']['unit'] ?>" <?php endif; ?>>
     <?php if ( $settings['list'] ):  ?>
     <div class="<?php _e($class_preflix,'ella') ?>-carousel-list" data-speed="<?php echo $settings['speed_slider'] ?>">
         <?php $count = 0; foreach (  $settings['list'] as $item ): ?>

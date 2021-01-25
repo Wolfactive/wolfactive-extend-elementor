@@ -1,5 +1,6 @@
 const changeLayoutHeader = () =>{
     let carouselCheckHeaderFloat = document.querySelector('.wa-ella-carousel[class*="header--float"], .wa-ella-parallax-section-one[class*="header--float"]'); 
+    let carouselCheckHeaderBoxed = document.querySelector('.wa-ella-carousel[class*="header--float"], .wa-ella-parallax-section-one[class*="header--boxed"]'); 
     let headerDOM = document.querySelector('header');
     if(carouselCheckHeaderFloat && headerDOM){
         if(headerDOM.classList.contains('header-template-03') || headerDOM.classList.contains('header-template-01')){
@@ -27,6 +28,17 @@ const changeLayoutHeader = () =>{
                 }
                 
             }
+        }
+        if(carouselCheckHeaderBoxed && headerDOM){
+            let classBoxed = carouselCheckHeaderFloat.getAttribute('data-header');
+            let background = carouselCheckHeaderFloat.getAttribute('data-outter');
+            let boxContain = carouselCheckHeaderFloat.getAttribute('data-boexed');
+            let container = headerDOM.querySelectorAll('.header__container, .navbar__contain');
+            headerDOM.classList.add(classBoxed);
+            headerDOM.style.backgroundColor = background;
+            container.forEach(item => {
+                item.style.maxWidth = boxContain;
+            })
         }
     }
 }

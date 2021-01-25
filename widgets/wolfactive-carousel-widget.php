@@ -60,6 +60,7 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 					'decore' => __( 'Decore', 'wolfactive-extend-elementor' ),
 					'limit' => __( 'Limit', 'wolfactive-extend-elementor' ),
 					'absoblute' => __( 'Header Float', 'wolfactive-extend-elementor' ),
+					'boxed' => __( 'Header Boxed', 'wolfactive-extend-elementor' ),
 				],
 			]
         );
@@ -76,6 +77,53 @@ class Wolfactive_Elementor_Carousel extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'boxed__container',
+			[
+				'label' => __( 'Width', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'size_units' => [ 'px', '%' ],
+				'min' => 5,
+				'max' => 1920,
+				'step' => 5,
+				'default' => 1350,
+				'conditions' => [
+					'terms' => [
+						[
+							'name' => 'slider_style',
+							'operator' => '==',
+							'value' => 'boxed'
+						],
+					]
+				]
+			]
+		);
+
+		$this->add_control(
+			'background_color',
+			[
+				'label' => __( 'Boxed Outter Background Color', 'wolfactive-extend-elementor' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'scheme' => [
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_1,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .boxed--outer' => 'color: {{VALUE}}',
+				],
+				'conditions' => [
+					'terms' => [
+						[
+							'name' => 'slider_style',
+							'operator' => '==',
+							'value' => 'boxed'
+						],
+					]
+				]
+			]
+		);
+
+		
 		$this->add_control(
 			'logo_image',
 			[
