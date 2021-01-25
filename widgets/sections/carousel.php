@@ -9,8 +9,8 @@
     <?php endif; ?> <?php if($settings['slider_style'] == 'absoblute'): ?>
     data-icon="<?php echo  $settings['cart_image']['url']?>" <?php endif; ?>
     <?php if($settings['slider_style'] == 'boxed'): ?> 
-    data-outter="<?php echo $settings['background_color'].'px' ?>"
-    data-boexed="<?php echo $settings['boxed__container']['size'].$settings['width']['unit'] ?>" <?php endif; ?>>
+    data-outter="<?php echo $settings['background_color'] ?>"
+    data-boexed="<?php echo $settings['boxed__container'].'px' ?>" <?php endif; ?>>
     <?php if ( $settings['list'] ):  ?>
     <div class="<?php _e($class_preflix,'ella') ?>-carousel-list" data-speed="<?php echo $settings['speed_slider'] ?>">
         <?php $count = 0; foreach (  $settings['list'] as $item ): ?>
