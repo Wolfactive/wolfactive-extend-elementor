@@ -1,5 +1,5 @@
 <div class="<?php _e($class_preflix,'ella') ?>-carousel 
-            <?php if($settings['slider_style'] == 'limit') echo "limit"; ?>
+            <?php if($settings['slider_style'] == 'limit' || $settings['slider_style'] == 'boxed') echo "limit"; ?>
             <?php if($settings['spacing_toggle'] != 'yes') echo "no-spacing-bottom"?>
             <?php if($settings['slider_style'] == 'absoblute') echo "header--float"; ?>"
     <?php if($settings['slider_style'] == 'absoblute') echo 'data-header="header--float"'; ?>
