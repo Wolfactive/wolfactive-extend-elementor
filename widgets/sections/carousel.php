@@ -2,7 +2,7 @@
             <?php if($settings['slider_style'] == 'limit' || $settings['slider_style'] == 'boxed') echo "limit"; ?>
             <?php if($settings['spacing_toggle'] != 'yes') echo "no-spacing-bottom"?>
             <?php if($settings['slider_style'] == 'absoblute') echo "header--float"; ?>
-            <?php if($settings['slider_style'] == 'absoblute') echo "header--boxed"; ?>"
+            <?php if($settings['slider_style'] == 'boxed') echo "header--boxed"; ?>"
     <?php if($settings['slider_style'] == 'absoblute') echo 'data-header="header--float"'; ?>
     <?php if($settings['slider_style'] == 'boxed') echo 'data-header="header--boxed"'; ?>
     <?php if($settings['slider_style'] == 'absoblute'): ?> data-logo="<?php echo  $settings['logo_image']['url']  ?>"
